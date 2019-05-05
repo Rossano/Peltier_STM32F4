@@ -1,0 +1,621 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Filename": "black_background.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Name": "background",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "ScalableImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "CenterX": 52,
+            "CenterY": 52,
+            "Radius": 50,
+            "LineWidth": 0,
+            "StartAngle": 0,
+            "EndAngle": 360,
+            "CapPrecision": "Butt",
+            "Alpha": 255,
+            "FileNameBackground": "__designer\\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.png",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 0,
+            "IndicatorPositionHeight": 0,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 33,
+            "Name": "PWMProgress",
+            "X": 68,
+            "Y": 160,
+            "Width": 104,
+            "Height": 104,
+            "Type": "CircleProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "TempPeltier_txt",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "PeltierTempText",
+            "X": 10,
+            "Y": 10,
+            "Width": 29,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "TempExt_Txt",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "ExtTempText",
+            "X": 10,
+            "Y": 45,
+            "Width": 32,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "TempPeltier",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "PeltierTemp",
+            "X": 100,
+            "Y": 10,
+            "Width": 32,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "TempExt",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "ExtTemp",
+            "X": 100,
+            "Y": 45,
+            "Width": 32,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "PWM_Txt",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "UseBuffer": false,
+              "BufferSize": 0
+            },
+            "Name": "PWMText",
+            "X": 70,
+            "Y": 114,
+            "Width": 84,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 255,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 27,
+                "Y": 12,
+                "Style": "Icon39",
+                "IconReleased": "__designer\\blue_icons_next_arrow_32.png",
+                "IconPressed": "__designer\\blue_icons_next_arrow_32.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 70,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "PWMUpButton",
+            "X": 170,
+            "Y": 148,
+            "Width": 70,
+            "Height": 50,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Alpha": 255,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 27,
+                "Y": 12,
+                "Style": "Icon5",
+                "IconReleased": "__designer\\blue_icons_back_arrow_32.png",
+                "IconPressed": "__designer\\blue_icons_back_arrow_32.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "X": 0,
+                "Y": 0,
+                "Width": 70,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Red": 0,
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 0,
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ],
+            "Name": "PWMDownButton",
+            "X": -2,
+            "Y": 148,
+            "Width": 70,
+            "Height": 50,
+            "Type": "FlexButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\blue_icons_settings_48.png",
+            "IconReleased": "__designer\\blue_icons_settings_48.png",
+            "IconX": 62,
+            "IconY": 7,
+            "IconHeight": 46,
+            "IconWidth": 46,
+            "ButtonStyle": "Style4",
+            "IconStyle": "Icon58",
+            "Name": "SettingButton",
+            "X": 35,
+            "Y": 264,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithIcon",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "PWM_Up",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "PWMUpButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "PWMUPClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "PWM_Down",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "PWMDownButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "PWMDownClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "SettingButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          }
+        ],
+        "Name": "MainScreen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 3600
+      },
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 0,
+            "Y": 35,
+            "Width": 133,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_1",
+            "X": 0,
+            "Y": 69,
+            "Width": 102,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_2",
+            "X": 0,
+            "Y": 0,
+            "Width": 112,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "SettingScreen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 251,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 88,
+            "Y": 142,
+            "Width": 42,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SplashScreenEnterInteraction",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Duration": 1000,
+              "Type": "ActionDelay"
+            }
+          },
+          {
+            "InteractionName": "SplashScreenEndInteraction",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "InteractionToTriggerOn": "SplashScreenEnterInteraction",
+              "Type": "TriggerInteractionCompleted"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "MainScreen",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "SplashScreen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "TempExt_Txt",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "TempPeltier_txt",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "TempExt",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "TempPeltier",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "PWM_Txt",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      }
+    ],
+    "Name": "Peltier",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "SplashScreen",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../../Middlewares/ST/TouchGFX/touchgfx",
+    "UIPath": ".",
+    "ApplicationTemplate": {
+      "Name": "STM32F429_DISCO",
+      "Version": "1.1.0",
+      "Description": "STM32F429_DISCO Application Template",
+      "AvailableColorDepths": [
+        16,
+        24
+      ],
+      "AvailableImageFormats": {
+        "16": {
+          "Opaque": "RGB565",
+          "NonOpaque": "ARGB8888"
+        },
+        "24": {
+          "Opaque": "RGB888",
+          "NonOpaque": "ARGB8888"
+        }
+      },
+      "AvailableResolutions": [
+        {
+          "Width": 240,
+          "Height": 320
+        }
+      ],
+      "PhysicalButtons": [],
+      "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j10",
+      "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj && touchgfx update_project --project-file=../EWARM/application.ewp && touchgfx update_project --project-file=../EWARM6/project.ewp && touchgfx update_project --project-file=../MDK-ARM/application.uvproj",
+      "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j10",
+      "RunSimulatorCommand": "build\\bin\\simulator.exe",
+      "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+      "FlashTargetCommand": "make -f ../gcc/Makefile -j8 flash"
+    }
+  },
+  "Version": "4.10.0",
+  "CreatedBy": "4.10.0"
+}

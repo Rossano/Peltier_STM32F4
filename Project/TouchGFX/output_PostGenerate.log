@@ -1,0 +1,170 @@
+<File>
+  <FileName>FrontendApplication.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
+</File>
+<File>
+  <FileName>MainScreenPresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/mainscreen_screen/mainscreenpresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>MainScreenView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/mainscreen_screen/mainscreenview.cpp</FilePath>
+</File>
+<File>
+  <FileName>Model.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
+</File>
+<File>
+  <FileName>SettingScreenPresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/settingscreen_screen/settingscreenpresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>SettingScreenView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/settingscreen_screen/settingscreenview.cpp</FilePath>
+</File>
+<File>
+  <FileName>SplashScreenPresenter.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/splashscreen_screen/splashscreenpresenter.cpp</FilePath>
+</File>
+<File>
+  <FileName>SplashScreenView.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/gui/src/splashscreen_screen/splashscreenview.cpp</FilePath>
+</File>
+<File>
+  <FileName>ApplicationFontProvider.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/applicationfontprovider.cpp</FilePath>
+</File>
+<File>
+  <FileName>BitmapDatabase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/bitmapdatabase.cpp</FilePath>
+</File>
+<File>
+  <FileName>black_background.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/black_background.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_buttons_round_edge_small.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_buttons_round_edge_small_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small_pressed.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_icons_back_arrow_32.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_back_arrow_32.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_icons_next_arrow_32.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_next_arrow_32.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_icons_settings_48.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_settings_48.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_verdana_10_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_verdana_20_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_verdana_20_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Font_verdana_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/font_verdana_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>FontGetters.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/fontgetters.cpp</FilePath>
+</File>
+<File>
+  <FileName>FrontendApplicationBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_verdana_10_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_verdana_20_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_20_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Kerning_verdana_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>LanguageGb.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
+</File>
+<File>
+  <FileName>MainScreenViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/mainscreen_screen/mainscreenviewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>SettingScreenViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/settingscreen_screen/settingscreenviewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>SplashScreenViewBase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/gui_generated/src/splashscreen_screen/splashscreenviewbase.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_verdana_10_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_verdana_10_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_verdana_20_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_verdana_20_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Table_verdana_40_4bpp.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/fonts/src/table_verdana_40_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>Texts.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/texts.cpp</FilePath>
+</File>
+<File>
+  <FileName>TypedTextDatabase.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/texts/src/typedtextdatabase.cpp</FilePath>
+</File>
