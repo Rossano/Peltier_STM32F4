@@ -13,6 +13,7 @@
 #include "usbd_core.h"
 #include "usbd_cdc.h"
 #include "usbd_cdc_if.h"
+#include "usb_device.h"
 
 #include "PeltierApplication.h"
 
@@ -26,9 +27,9 @@ TIM_HandleTypeDef htim10;
 
 uint16_t pwm10_level;
 
-char line[SHELL_MAX_LINE_LENGTH];
+uint8_t lineBuf[SHELL_MAX_LINE_LENGTH];
 bool bEOL = false;
-uint8_t count = 0;
+uint8_t lenghtBuf = 0;
 
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
@@ -100,7 +101,7 @@ void PeltierApplication::MX_GPIO_Init()
 	  __HAL_RCC_GPIOD_CLK_ENABLE();
 
 	  /*Configure GPIO pin Output Level */
-	  HAL_GPIO_WritePin(GPIOE, Peltier_VDD_Pin|Ext_VDD_Pin, GPIO_PIN_RESET);
+//	  HAL_GPIO_WritePin(GPIOE, Peltier_VDD_Pin|Ext_VDD_Pin, GPIO_PIN_RESET);
 
 	  /*Configure GPIO pin Output Level */
 	  HAL_GPIO_WritePin(GPIOC, NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin, GPIO_PIN_RESET);
@@ -115,11 +116,11 @@ void PeltierApplication::MX_GPIO_Init()
 	  HAL_GPIO_WritePin(GPIOG, LD3_Pin|LD4_Pin, GPIO_PIN_RESET);
 
 	  /*Configure GPIO pins : Peltier_VDD_Pin Ext_VDD_Pin */
-	  GPIO_InitStruct.Pin = Peltier_VDD_Pin|Ext_VDD_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+//	  GPIO_InitStruct.Pin = Peltier_VDD_Pin|Ext_VDD_Pin;
+//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+//	  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
 	  /*Configure GPIO pins : NCS_MEMS_SPI_Pin CSX_Pin OTG_FS_PSO_Pin */
 	  GPIO_InitStruct.Pin = NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin;
@@ -266,13 +267,13 @@ void PeltierApplication::MX_USB_DEVICE_Init()
 	  /* USER CODE END USB_DEVICE_Init_PreTreatment */
 
 	  /* Init Device Library, add supported class and start the library. */
-	  USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS);
+	  USBD_Init(&hUsbDeviceHS, &HS_Desc, DEVICE_HS);
 
-	  USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC);
+	  USBD_RegisterClass(&hUsbDeviceHS, &USBD_CDC);
 
-	  USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS);
+	  USBD_CDC_RegisterInterface(&hUsbDeviceHS, &USBD_Interface_fops_HS);
 
-	  USBD_Start(&hUsbDeviceFS);
+	  USBD_Start(&hUsbDeviceHS);
 
 	  /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
 
@@ -292,6 +293,8 @@ void PeltierApplication::StartDefaultTask(void const * argument)
 //  MX_USB_HOST_Init();
 
   /* USER CODE BEGIN 5 */
+	  /* init code for USB_DEVICE */
+	  MX_USB_DEVICE_Init();
   /* Infinite loop */
   for(;;)
   {
@@ -320,10 +323,10 @@ void PeltierApplication::StartShellTask(void const * argument)
   {
 	  // Display the prompt
 	  iprintf(SHELL_PROMPT);
-#if USE_USBCDC
+#ifdef USE_USBCDC
 	  if(bEOL)
 	  {
-		  shell->ShellTask((void *)argument, line);
+		  //shell->ShellTask((void *)argument, line);
 		  bEOL = false;
 	  }
 #else
@@ -400,6 +403,33 @@ uint16_t clip8(uint16_t level)
 	else return level;
 }
 
+/// <summary>
+/// USB CDC Receive Callback function
+/// It is called when data (chars) are received, it process the rx char
+/// and create a new request for the shell task when a CR is received
+/// </summary>
+/// <param name='Buf">Buffer storing the received data</param>
+/// <param name="Len">Lenght of the buffer</param>
+void CDC_ReceiveCallback(uint8_t *Buf, uint32_t *Len)
+{
+	//CDC_Transmit_HS(Buf, 1);//(uint16_t *)Len);
+	if(*Buf == 0 || *Buf == 13 || *Buf == 10 || lenghtBuf == SHELL_MAX_LINE_LENGTH)
+	{
+		bEOL = true;
+		CDC_Transmit_HS((uint8_t *)"New Command:\n\r", 14);
+		lineBuf[lenghtBuf] = 10;
+		lineBuf[lenghtBuf+1] = 13;
+		uint32_t foo = lenghtBuf + 2;
+		CDC_Transmit_HS(lineBuf, foo);
+		lenghtBuf = 0;
+		for(uint8_t i=0; i<SHELL_MAX_LINE_LENGTH; i++) lineBuf[i] = 0;
+	}
+	else
+	{
+		lineBuf[lenghtBuf++] = *Buf;
+		CDC_Transmit_HS(Buf, 1);
+	}
+}
 /// <summary>
 /// PWM10 Initialization function
 /// </summary>
@@ -860,10 +890,10 @@ void USB_ReceivedChar(uint8_t ch)
 	if(ch == '\r' || ch == '\n')
 	{
 		bEOL = true;
-		line[count] = 0;
+		lineBuf[lenghtBuf] = 0;
 	}
-	else if(count < SHELL_MAX_LINE_LENGTH)
+	else if(lenghtBuf < SHELL_MAX_LINE_LENGTH)
 	{
-		line[count++] = ch;
+		lineBuf[lenghtBuf++] = ch;
 	}
 }

@@ -76,7 +76,7 @@ int main(void)
     hw_init();
     touchgfx_init();
 
-    xTaskCreate(DefaultTask, "Default Task", 128, NULL, osPriorityNormal, NULL);
+    xTaskCreate(DefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
     xTaskCreate(ShellTask, "Shell Task", 128, NULL, osPriorityNormal, NULL);
 
     xTaskCreate(GUITask, "GUITask",
