@@ -77,7 +77,7 @@ static void xStartDefaultTask(void * argument)
 
   /* USER CODE BEGIN 5 */
 	  /* init code for USB_DEVICE */
-//	  MX_USB_DEVICE_Init();
+	  MX_USB_DEVICE_Init();
   /* Infinite loop */
 	  uint8_t myBuf[20] = "Ciao Belo\r\n";
   for(;;)
@@ -89,14 +89,14 @@ static void xStartDefaultTask(void * argument)
   /* USER CODE END 5 */
 }
 
-PeltierApplication *appli = new PeltierApplication();
+//PeltierApplication *appli = new PeltierApplication();
 int main(void)
 {
     hw_init();
     touchgfx_init();
 
- //   appli->MX_USB_DEVICE_Init();
-    //xTaskCreate(xStartDefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
+    //appli->MX_USB_DEVICE_Init();
+    xTaskCreate(xStartDefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
  //   xTaskCreate(xStartDefaultTask, "Default Task", 2048, NULL, 3, NULL);
  //   xTaskCreate(ShellTask, "Shell Task", 128, NULL, osPriorityNormal, NULL);
 
