@@ -154,8 +154,8 @@ float_options += -mfloat-abi=hard
 endif
 
 assembler_options += -mcpu=cortex-m4 -march=armv7e-m -Wno-psabi $(float_options) -DCORE_M4 -D__irq=""
-c_compiler_options += -mcpu=cortex-m4 -march=armv7e-m  -Wno-psabi $(float_options) -DCORE_M4 -D__irq=""
-cpp_compiler_options += -mcpu=cortex-m4 -march=armv7e-m -Wno-psabi $(float_options) -DCORE_M4 -D__irq=""
+c_compiler_options += -mcpu=cortex-m4 -march=armv7e-m  -Wno-psabi $(float_options) -DCORE_M4 -D__irq="" 
+cpp_compiler_options += -mcpu=cortex-m4 -march=armv7e-m -Wno-psabi $(float_options) -DCORE_M4 -D__irq="" 
 linker_options += -mcpu=cortex-m4 -march=armv7e-m -Wno-psabi $(float_options)
 
 ############################################################################################################
@@ -281,6 +281,7 @@ board_c_files := \
 	$(Drivers_path)/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c \
 	$(Drivers_path)/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c \
 	$(Drivers_path)/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c \
+	$(Drivers_path)/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c \
 	$(Middlewares_path)/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c \
 	$(Middlewares_path)/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
 	$(Middlewares_path)/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
@@ -318,6 +319,8 @@ board_include_paths := \
 	$(Drivers_path)/BSP/STM32F429I-Discovery \
 	$(Drivers_path)/CMSIS/Include \
 	$(Drivers_path)/CMSIS/Device/ST/STM32f4xx/Include \
+	$(Middlewares_path)/ST/STM32_USB_Device_Library/Class/CDC/Src \
+	$(Middlewares_path)/ST/STM32_USB_Device_Library/Core/Src \
 	TouchGFX/target \
 	Core/Inc \
 	"C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ARMTools\arm-atollic-eabi\include" \

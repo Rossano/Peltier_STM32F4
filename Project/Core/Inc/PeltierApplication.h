@@ -84,6 +84,7 @@ public:
 	osSemaphoreId sampleBinarySemHandle;
 	cShell *shell;
 	void MX_ADC1_Init();
+	void MX_USB_DEVICE_Init();
 	void StartDefaultTask(void const * argument);
 	void StartShellTask(void const * argument);
 	void StartCoreTask(void const * argument);
@@ -120,7 +121,7 @@ private:
 	uint16_t uTemperatureRaw;
 	void MX_GPIO_Init();
 	void MX_TIM10_Init();
-	void MX_USB_DEVICE_Init();
+	//void MX_USB_DEVICE_Init();
 	//void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 };
@@ -140,5 +141,7 @@ void ADCInit(int argc, char *argv[]);
 void getADC_Result(int argc, char *argv[]);
 
 void USB_ReceivedChar(uint8_t ch);
+
+//void xStartDefaultTask(void * argument);
 
 #endif /* PROJECT_PELTIERAPPLICATION_H_ */

@@ -70,14 +70,35 @@ static void ShellTask(void *p)
 	appli->shell->vShellThread((void *)ShellCommand);
 }
 
+static void xStartDefaultTask(void * argument)
+{
+  /* init code for USB_HOST */
+//  MX_USB_HOST_Init();
+
+  /* USER CODE BEGIN 5 */
+	  /* init code for USB_DEVICE */
+//	  MX_USB_DEVICE_Init();
+  /* Infinite loop */
+	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+  for(;;)
+  {
+    //osDelay(1);
+	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+	  HAL_Delay(500);
+  }
+  /* USER CODE END 5 */
+}
+
 PeltierApplication *appli = new PeltierApplication();
 int main(void)
 {
     hw_init();
     touchgfx_init();
 
-    xTaskCreate(DefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
-    xTaskCreate(ShellTask, "Shell Task", 128, NULL, osPriorityNormal, NULL);
+ //   appli->MX_USB_DEVICE_Init();
+    //xTaskCreate(xStartDefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
+ //   xTaskCreate(xStartDefaultTask, "Default Task", 2048, NULL, 3, NULL);
+ //   xTaskCreate(ShellTask, "Shell Task", 128, NULL, osPriorityNormal, NULL);
 
     xTaskCreate(GUITask, "GUITask",
                 configGUI_TASK_STK_SIZE,
