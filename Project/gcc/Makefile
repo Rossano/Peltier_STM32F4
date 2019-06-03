@@ -123,7 +123,7 @@ c_compiler_options += -g \
                     -nostartfiles -mthumb -fno-exceptions \
                     -mno-thumb-interwork -std=c99 \
                     $(no_libs) \
-                    -Os -fno-strict-aliasing -fdata-sections -ffunction-sections
+                    -Og -fno-strict-aliasing -fdata-sections -ffunction-sections
 
 c_compiler_options += $(float_options)
 
@@ -131,7 +131,7 @@ cpp_compiler         := arm-none-eabi-g++
 cpp_compiler_options += -g -mthumb \
                     -nostartfiles $(no_libs) \
                     -mno-thumb-interwork -fno-rtti -fno-exceptions  \
-                    -Os -fno-strict-aliasing -fdata-sections -ffunction-sections
+                    -Og -fno-strict-aliasing -fdata-sections -ffunction-sections
 
 cpp_compiler_options += $(float_options)
 
@@ -289,8 +289,8 @@ board_c_files := \
 	Core/Src/usb_device.c \
 	Core/Src/usbd_cdc_if.c \
 	Core/Src/usbd_conf.c \
-	Core/Src/usbd_desc.c \
-	Core/src/tiny_printf.c
+	Core/Src/usbd_desc.c 
+#	Core/src/tiny_printf.c
 
 board_cpp_files := \
 	Core/Src/main.cpp \

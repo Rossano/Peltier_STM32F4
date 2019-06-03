@@ -15,8 +15,11 @@ public:
 	/**
 	 * Custom Action Handlers
 	 */
-	virtual void PWMUPClicked();
-	virtual void PWMDownClicked();
+	virtual void PWMUPClicked(const Image &b, const ClickEvent &e);
+	virtual void PWMDownClicked(const Image &b, const ClickEvent &e);
+	virtual void PWMStartClicked(const Image &b, const ClickEvent &e);
+	virtual void PWMStopClicked(const Image &b, const ClickEvent &e);
+	virtual void PWMAutoClicked(const Image &b, const ClickEvent &e);
 
 	/**
 	 * UI interaction
@@ -25,7 +28,15 @@ public:
 	void notifyExternalTemperature(int8_t temperature);
 	void notifyPWMChange(uint16_t pwm);
 
+	
 protected:
+	/**
+	*	Event Callbacks
+	*/
+	Callback<MainScreenView, const Image &, const ClickEvent &> PWMUpClickedCallback;
+	Callback<MainScreenView, const Image &, const ClickEvent &> PWMDownClickedCallback;
+	Callback<MainScreenView, const Image &, const ClickEvent &> PWMStartClickedCallback;
+	Callback<MainScreenView, const Image &, const ClickEvent &> PWMStopClickedCallback;
 };
 
 #endif // MAINSCREEN_VIEW_HPP

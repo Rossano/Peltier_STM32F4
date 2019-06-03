@@ -27,6 +27,28 @@ public:
 
     virtual ~MainScreenPresenter() {};
 
+	///
+	/// Get Notification from HW
+	///
+	void notifyPWMStart();
+	void notifyPWMStop();
+	void notifyPWMUp(uint16_t);
+	void notifyPWMDown(uint16_t);
+	void notifyAuto(bool);
+	void notifyManual(bool);
+	void notifyPWMChange(uint16_t);
+
+	///
+	///	Event Handlers
+	///
+/*	void PWMUpClickHandler(const Image &, const ClickEvent &);
+	void PWMDownClickHandler(const Image &, const ClickEvent &);
+	void PWMStartClickHandler(const Image &, const ClickEvent &);
+	void PWMStopClickEvent(const Image &, const ClickEvent &);
+	*/
+protected:
+	
+
 private:
     MainScreenPresenter();
 

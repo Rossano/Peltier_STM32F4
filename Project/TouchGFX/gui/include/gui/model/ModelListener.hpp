@@ -34,7 +34,13 @@ public:
 	virtual void notifyPeltierTemperature(int8_t temperature) { }
 	virtual void notifyExternalTemperature(int8_t temperature) { }
 	virtual void notifyPWMChange(uint16_t pwm) { }
-
+	/*virtual void notifyPWMStart();
+	virtual void notifyPWMStop();
+	virtual void notifyPWMUp(uint16_t);
+	virtual void notifyPWMDown(uint16_t);
+	virtual void notifyAuto(bool);
+	virtual void notifyManual(bool);
+	*/
 protected:
     Model* model;
 };

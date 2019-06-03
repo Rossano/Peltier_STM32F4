@@ -3,7 +3,11 @@
 
 #include <touchgfx/Utils.hpp>
 
+#define PWM_STEP	5
+
 class ModelListener;
+
+///extern uint16_t pwm_step = PWM_STEP;
 
 /**
  * The Model class defines the data model in the model-view-presenter paradigm.
@@ -44,12 +48,19 @@ public:
 	int8_t getExtTemperature();
 	int8_t getPeltierTemperature();
 	uint16_t getPWM();
+	bool getPWMState();
+	bool getPWMAuto();
+	uint16_t getPWMStep();
+
 	/**
 	* Functions to get UI elements that are protected in the model
 	*/
 	void setExtTemperature(int8_t);
 	void setPeltierTemperature(int8_t);
 	void setPWM(uint16_t);
+	void setPWMState(bool);
+	void setPWMAuto(bool);
+	void setPWMStep(uint16_t);
 
 protected:
     /**
@@ -60,6 +71,9 @@ protected:
 	uint16_t pwmPeltier = 0;
 	int8_t peltierTemperature = 25;
 	int8_t extTemperature = 25;
+	bool peltierActive = false;
+	bool peltierAuto = false;
+	uint16_t pwm_step = PWM_STEP;
 };
 
 #endif /* MODEL_HPP */

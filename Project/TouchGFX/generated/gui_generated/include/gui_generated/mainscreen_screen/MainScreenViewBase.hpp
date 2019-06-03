@@ -12,8 +12,8 @@
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/mixins/ClickListener.hpp>
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
 {
@@ -22,19 +22,6 @@ public:
     virtual ~MainScreenViewBase() {}
 
     virtual void setupScreen();
-
-    /*
-     * Custom Action Handlers
-     */
-    virtual void PWMUPClicked()
-    {
-        // Override and implement this function in MainScreenView
-    }
-
-    virtual void PWMDownClicked()
-    {
-        // Override and implement this function in MainScreenView
-    }
 
 protected:
     FrontendApplication& application() {
@@ -52,9 +39,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard PeltierTemp;
     touchgfx::TextAreaWithOneWildcard ExtTemp;
     touchgfx::TextAreaWithOneWildcard PWMText;
-    touchgfx::IconButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > PWMUpButton;
-    touchgfx::IconButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > > PWMDownButton;
-    touchgfx::ButtonWithIcon SettingButton;
+    touchgfx::ClickListener< touchgfx::Image > PWMDownButton;
+    touchgfx::ClickListener< touchgfx::Image > StartButton;
+    touchgfx::ClickListener< touchgfx::Image > StopButton;
+    touchgfx::ClickListener< touchgfx::Image > PWMUpButton;
 
     /*
      * Wildcard Buffers
@@ -65,18 +53,6 @@ protected:
     touchgfx::Unicode::UnicodeChar ExtTempBuffer[EXTTEMP_SIZE];
 
 private:
-
-    /*
-     * Callback Handler Declarations
-     */
-    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
-    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
-
-    /*
-     * Callback Declarations
-     */
-    touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
-    touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Canvas Buffer Size

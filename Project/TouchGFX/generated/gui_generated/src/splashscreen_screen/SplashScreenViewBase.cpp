@@ -14,6 +14,7 @@ SplashScreenViewBase::SplashScreenViewBase() :
     textArea1.setXY(88, 142);
     textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(251, 0, 0));
     textArea1.setLinespacing(0);
+    textArea1.setRotation(TEXT_ROTATE_90);
     textArea1.setTypedText(TypedText(T_SINGLEUSEID1));
 
     add(box1);

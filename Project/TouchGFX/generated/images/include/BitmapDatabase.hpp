@@ -6,13 +6,12 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BLACK_BACKGROUND_ID = 0; // Size: 20x20 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 1; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID = 2; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_ICONS_BACK_ARROW_32_ID = 3; // Size: 17x30 pixels
-const uint16_t BITMAP_BLUE_ICONS_NEXT_ARROW_32_ID = 4; // Size: 17x30 pixels
-const uint16_t BITMAP_BLUE_ICONS_SETTINGS_48_ID = 5; // Size: 46x46 pixels
-const uint16_t BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_CIRCLE_INDICATOR_BG_LINE_FULL_ID = 6; // Size: 104x104 pixels
+const uint16_t BITMAP_ARROW_DX_ID = 0; // Size: 40x40 pixels
+const uint16_t BITMAP_ARROW_SX_ID = 1; // Size: 40x40 pixels
+const uint16_t BITMAP_START_ID = 2; // Size: 40x40 pixels
+const uint16_t BITMAP_STOP_ID = 3; // Size: 40x40 pixels
+const uint16_t BITMAP_BLACK_BACKGROUND_ID = 4; // Size: 20x20 pixels
+const uint16_t BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_CIRCLE_INDICATOR_BG_LINE_FULL_ID = 5; // Size: 104x104 pixels
 
 namespace BitmapDatabase
 {
