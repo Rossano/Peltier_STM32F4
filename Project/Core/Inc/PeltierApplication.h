@@ -84,7 +84,7 @@ public:
 	osSemaphoreId sampleBinarySemHandle;
 	cShell *shell;
 	void MX_ADC1_Init();
-	void MX_USB_DEVICE_Init();
+//	void MX_USB_DEVICE_Init();
 	void StartDefaultTask(void const * argument);
 	void StartShellTask(void const * argument);
 	void StartCoreTask(void const * argument);

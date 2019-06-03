@@ -337,6 +337,7 @@ void PeltierApplication::MX_TIM10_Init(void)
 
 }
 
+#if 0
 void PeltierApplication::MX_USB_DEVICE_Init()
 {
 	  /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
@@ -356,6 +357,7 @@ void PeltierApplication::MX_USB_DEVICE_Init()
 
 	  /* USER CODE END USB_DEVICE_Init_PostTreatment */
 }
+#endif
 
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**

@@ -36,7 +36,7 @@
 #include "stm32f4xx_hal.h"
 
 /* USER CODE BEGIN INCLUDE */
-#include "stm32f4xx_hal_pcd.h"
+
 /* USER CODE END INCLUDE */
 
 /** @addtogroup USBD_OTG_DRIVER

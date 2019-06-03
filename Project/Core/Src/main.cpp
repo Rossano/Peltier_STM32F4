@@ -61,7 +61,7 @@ using namespace touchgfx;
 
 #define configGUI_TASK_STK_SIZE                 ( 1024 )
 
-//#define USE_USB
+#define USE_USB
 
 static void GUITask(void* params)
 {
@@ -213,7 +213,7 @@ int main(void)
     //PeltierApplication *appli = new PeltierApplication();
 
     //appli->MX_USB_DEVICE_Init();
- //   xTaskCreate(xStartDefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
+    xTaskCreate(xStartDefaultTask, "Default Task", 128, NULL, osPriorityBelowNormal, NULL);
  //   xTaskCreate(xStartDefaultTask, "Default Task", 2048, NULL, 3, NULL);
     xTaskCreate(ShellTask, "Shell Task", 128, NULL, osPriorityNormal, NULL);
 

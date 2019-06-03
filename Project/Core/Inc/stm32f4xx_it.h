@@ -21,6 +21,7 @@ void DebugMon_Handler(void);
 void LTDC_ER_IRQHandler(void);
 void DMA2D_IRQHandler(void);
 void SysTick_Handler(void);
+void OTG_HS_IRQHandler(void);
 
 #ifdef __cplusplus
 }

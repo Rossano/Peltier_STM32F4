@@ -26,8 +26,7 @@
 #include "usbd_core.h"
 
 /* USER CODE BEGIN Includes */
-#include "stm32f4xx_hal_pcd.h"
-#include "usbd_conf.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,6 +35,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+extern void Error_Handler();
 
 /* USER CODE END PV */
 
@@ -46,7 +46,7 @@ void Error_Handler(void);
 void SystemClock_Config(void);
 
 /* USER CODE BEGIN 0 */
- HAL_StatusTypeDef HAL_PCD_Init(PCD_HandleTypeDef *hpcd);
+
 /* USER CODE END 0 */
 
 /* USER CODE BEGIN PFP */
