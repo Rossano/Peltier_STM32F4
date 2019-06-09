@@ -24,6 +24,8 @@
 
 /* USER CODE BEGIN INCLUDE */
 
+#include "main.h"
+
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -295,12 +297,14 @@ uint8_t CDC_Transmit_HS(uint8_t* Buf, uint16_t Len)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
+/*
 __weak void CDC_ReceiveCallback(uint8_t *buf, uint32_t *Len)
 {
-
+	new_char_on_usb = 0x1;
+	usb_cdc_rx_char = *Len;
+	for(uint8_t i = 0; i < *Len; i++) usb_cdc_buffer[i] = buf[i];
 }
-
+*/
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

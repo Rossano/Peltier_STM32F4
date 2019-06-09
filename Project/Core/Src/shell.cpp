@@ -11,6 +11,7 @@
 
 //	My included file and headers
 //#include <stddef.h>
+#include "main.h"
 
 //	Shell own inclusion header
 #include "shell.hpp"
@@ -163,19 +164,32 @@ void cShell::ShellTask(void *p, char *line)
 /// <param name="p">A pointer to the implemented commands.</param>
 void cShell::vShellThread(void *p)
 {
-	char line[SHELL_MAX_LINE_LENGTH];
+	//char line[SHELL_MAX_LINE_LENGTH];
 	// chRegSetThreadName("shell");
 
 	iprintf("%s STM32 Shell;%S",CR,CR);
 
+	cdc_buf_t line;
 	while (!bEnd)
 	{
-		// Display the prompt
+/*		// Display the prompt
 		iprintf(SHELL_PROMPT);
 		// Get the command line from stdin
 		gets(line);
-		// Calls the shell task
-		ShellTask(p, line);
+*/
+		BaseType_t xStatus;
+		xStatus = xQueueReceive(xUsb_rx, &line, 100);
+		if(xStatus != pdPASS)
+		{
+			// ERROR
+		}
+		// Check if there was a message awaiting or it was just a timeout
+		if(line[0] != 0)
+		{
+			// Calls the shell task
+			ShellTask(p, (char *)line);
+		}
+
 	}
 	return;
 }

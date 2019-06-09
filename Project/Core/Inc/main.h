@@ -33,7 +33,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "FreeRTOS.h"
+#include "queue.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -243,7 +244,18 @@ void Error_Handler(void);
 #define NBL0_GPIO_Port GPIOE
 #define NBL1_Pin GPIO_PIN_1
 #define NBL1_GPIO_Port GPIOE
+
 /* USER CODE BEGIN Private defines */
+
+#define MAX_BUF_LENGTH		32
+
+typedef uint8_t cdc_buf_t[MAX_BUF_LENGTH];
+
+extern uint8_t usb_cdc_rx_char;
+extern cdc_buf_t usb_cdc_buffer;
+extern uint8_t newCmd;
+extern uint8_t new_char_on_usb;
+extern QueueHandle_t xUsb_tx, xUsb_rx;
 
 /* USER CODE END Private defines */
 

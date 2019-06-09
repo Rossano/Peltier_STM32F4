@@ -63,6 +63,12 @@ using namespace touchgfx;
 
 #define USE_USB
 
+/*uint8_t usb_cdc_rx_char;
+cdc_buf_t usb_cdc_buffer;
+uint8_t newCmd;
+uint8_t new_char_on_usb; */
+QueueHandle_t xUsb_tx, xUsb_rx;
+
 static void GUITask(void* params)
 {
     touchgfx::HAL::getInstance()->taskEntry();
@@ -77,6 +83,23 @@ static void DefaultTask(void *p)
 static void ShellTask(void *p)
 {
 	appli->shell->vShellThread((void *)ShellCommand);
+/*	cdc_buf_t line;
+	for(uint8_t i=0; i<sizeof(cdc_buf_t); i++) line[i] = 0;
+	while (true)
+	{
+		BaseType_t xStatus;
+		xStatus = xQueueReceive(xUsb_rx, &line, 100);
+		if(xStatus != pdPASS)
+		{
+			// ERROR
+		}
+		// Check if there was a message awaiting or it was just a timeout
+		if(line[0] != 0)
+		{
+			// Calls the shell task
+			appli->shell->ShellTask(p, (char *)line);
+		}
+	}*/
 }
 
 static void xStartDefaultTask(void * argument)
@@ -84,18 +107,73 @@ static void xStartDefaultTask(void * argument)
   /* init code for USB_HOST */
 //  MX_USB_HOST_Init();
 
+  uint8_t pos = 0;
+  const TickType_t ticks = pdMS_TO_TICKS(50);
+  cdc_buf_t buffer;
+  cdc_buf_t data_to_send;
+/*  xQueueCreate(3, sizeof(cdc_buf_t));
+  xQueueCreate(3, sizeof(cdc_buf_t)); */
+
   /* USER CODE BEGIN 5 */
 	  /* init code for USB_DEVICE */
-//	  MX_USB_DEVICE_Init();
   /* Infinite loop */
-	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+//	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+  ///
+  ///	Print the PROMPT
+  ///
+  CDC_Transmit_HS((uint8_t*)"\r\nSTM32> ", 9);
   for(;;)
   {
     //osDelay(1);
 #ifdef USE_USB
-	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+	  ///
+	  /// Task only manage to send the outcoming messages, incoming messages are managed by callback
+	  ///
+
+//	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+	  ///
+	  /// Handle a new char from USB
+	  ///
+/*	  if(new_char_on_usb)
+	  {
+		  for(uint8_t i=0; i < usb_cdc_rx_char; i++)
+		  {
+			  if(usb_cdc_buffer[i] == '\r' || usb_cdc_buffer[i] == '\n' || usb_cdc_buffer[i] == '\0' || pos < MAX_BUF_LENGTH)
+			  {
+				  buffer[pos++] = '0';
+				  xQueueSendToBack(xUsb_tx, &buffer, 0);
+				  newCmd = true;
+				  CDC_Transmit_HS(buffer, pos);
+				  break;
+			  }
+			  else {
+				  buffer[pos++] = usb_cdc_buffer[i];
+			  }
+		  }
+		  new_char_on_usb = false;
+		  // Clean up the buffer
+		  if(newCmd)
+		  {
+			  for(uint8_t i=0; i < MAX_BUF_LENGTH; i++) buffer[i] = 0;
+			  newCmd = false;
+		  }
+	  }*/
+	  ///
+	  /// Check if a new message has to be sent to USB and do it
+	  ///
+	  BaseType_t xStatus;
+	  if((xStatus = xQueueReceive(xUsb_rx, &data_to_send,ticks)) == pdPASS)
+	  {
+		  uint8_t len = 0;
+		  while (data_to_send[len] && len < MAX_BUF_LENGTH) len++;
+		  CDC_Transmit_HS(data_to_send, len);
+		  ///
+		  ///	Print the PROMPT
+		  ///
+		  CDC_Transmit_HS((uint8_t*)"\r\nSTM32> ", 9);
+	  }
 #endif
-	  HAL_Delay(500);
+//	  HAL_Delay(500);
   }
   /* USER CODE END 5 */
 }
@@ -201,6 +279,9 @@ int main(void)
 #endif
 #ifdef USE_USB
     MX_USB_DEVICE_Init();
+    // Create Tx/Rx queues
+    xUsb_tx = xQueueCreate(1, sizeof(cdc_buf_t));
+    xUsb_rx = xQueueCreate(1, sizeof(cdc_buf_t));
 #ifdef PRINTF_DBG
     printf("Init USB\n");
 #endif

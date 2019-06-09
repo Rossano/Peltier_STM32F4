@@ -15,6 +15,10 @@
 #include "usbd_cdc_if.h"
 #include "usb_device.h"
 
+#include "FreeRTOS.h"
+#include "queue.h"
+
+#include "main.h"
 #include "PeltierApplication.h"
 
 #include <stdlib.h>
@@ -494,14 +498,27 @@ uint16_t clip8(uint16_t level)
 void CDC_ReceiveCallback(uint8_t *Buf, uint32_t *Len)
 {
 	//CDC_Transmit_HS(Buf, 1);//(uint16_t *)Len);
+	///
+	///	Checkif it is an EOL, in that case push the command in the rx FIFO for the shell
+	///
 	if(*Buf == 0 || *Buf == 13 || *Buf == 10 || lenghtBuf == SHELL_MAX_LINE_LENGTH)
 	{
 		bEOL = true;
-		CDC_Transmit_HS((uint8_t *)"New Command:\n\r", 14);
+		// Indication that new command is received
+		CDC_Transmit_HS((uint8_t *)"\n\rNew Command:", 16);
 		lineBuf[lenghtBuf] = 10;
 		lineBuf[lenghtBuf+1] = 13;
 		uint32_t foo = lenghtBuf + 2;
 		CDC_Transmit_HS(lineBuf, foo);
+		CDC_Transmit_HS((uint8_t *)"\r\nSTM32> ", 9);
+		lineBuf[lenghtBuf] = 0;
+		//	Send the string into the rx FIFO
+		BaseType_t xStatus;
+		xStatus = xQueueSendToBackFromISR(xUsb_rx, lineBuf, pdFALSE);
+		if(xStatus != pdPASS)
+		{
+			/// Error
+		}
 		lenghtBuf = 0;
 		for(uint8_t i=0; i<SHELL_MAX_LINE_LENGTH; i++) lineBuf[i] = 0;
 	}
