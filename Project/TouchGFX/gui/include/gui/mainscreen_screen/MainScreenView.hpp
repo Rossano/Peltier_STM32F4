@@ -24,8 +24,9 @@ public:
 	/**
 	 * UI interaction
 	 */
-	void notifyPeltierTemperature(int8_t temperature);
-	void notifyExternalTemperature(int8_t temperature);
+	void notifyPeltierTemperature(float temperature);
+	void notifyExternalTemperature(float temperature);
+	void notiryInternalTempSensor(float temperature);
 	void notifyPWMChange(uint16_t pwm);
 
 	

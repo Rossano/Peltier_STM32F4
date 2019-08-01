@@ -975,6 +975,16 @@
               <FilePath>../touchgfx/generated/fonts/src/applicationfontprovider.cpp</FilePath>
             </File>
             <File>
+              <FileName>Arrow_Dx.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/arrow_dx.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Arrow_Sx.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/arrow_sx.cpp</FilePath>
+            </File>
+            <File>
               <FileName>BitmapDatabase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/bitmapdatabase.cpp</FilePath>
@@ -983,31 +993,6 @@
               <FileName>black_background.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/black_background.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_buttons_round_edge_small.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_buttons_round_edge_small_pressed.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small_pressed.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_icons_back_arrow_32.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_back_arrow_32.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_icons_next_arrow_32.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_next_arrow_32.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_icons_settings_48.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/images/src/__designer/blue_icons_settings_48.cpp</FilePath>
             </File>
             <File>
               <FileName>blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</FileName>
@@ -1073,6 +1058,16 @@
               <FileName>SplashScreenViewBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/gui_generated/src/splashscreen_screen/splashscreenviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Start.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/start.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Stop.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/stop.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_verdana_10_4bpp.cpp</FileName>

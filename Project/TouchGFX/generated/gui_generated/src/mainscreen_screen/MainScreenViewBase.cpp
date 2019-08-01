@@ -10,10 +10,6 @@ MainScreenViewBase::MainScreenViewBase()
 {
     CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
-    background.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
-    background.setPosition(0, 0, 240, 320);
-    background.setScalingAlgorithm(ScalableImage::NEAREST_NEIGHBOR);
-
     PWMProgress.setXY(68, 200);
     PWMProgress.setProgressIndicatorPosition(0, 0, 104, 104);
     PWMProgress.setRange(0, 100);
@@ -25,6 +21,10 @@ MainScreenViewBase::MainScreenViewBase()
     PWMProgressPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     PWMProgress.setPainter(PWMProgressPainter);
     PWMProgress.setValue(33);
+
+    background.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
+    background.setPosition(0, 0, 240, 320);
+    background.setScalingAlgorithm(ScalableImage::NEAREST_NEIGHBOR);
 
     PeltierTempText.setXY(205, 10);
     PeltierTempText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -60,6 +60,9 @@ MainScreenViewBase::MainScreenViewBase()
     PWMText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     PWMText.setLinespacing(0);
     PWMText.setRotation(TEXT_ROTATE_90);
+    PWMTextBuffer[0] = 0;
+    PWMText.setWildcard(PWMTextBuffer);
+    PWMText.resizeToCurrentText();
     PWMText.setTypedText(TypedText(T_PWM_TXT));
 
     PWMDownButton.setXY(29, 15);
@@ -74,8 +77,8 @@ MainScreenViewBase::MainScreenViewBase()
     PWMUpButton.setXY(29, 109);
     PWMUpButton.setBitmap(Bitmap(BITMAP_ARROW_DX_ID));
 
-    add(background);
     add(PWMProgress);
+    add(background);
     add(PeltierTempText);
     add(ExtTempText);
     add(PeltierTemp);

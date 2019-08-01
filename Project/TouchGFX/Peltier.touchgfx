@@ -4,6 +4,42 @@
       {
         "Components": [
           {
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "CenterX": 52,
+            "CenterY": 52,
+            "Radius": 50,
+            "LineWidth": 0,
+            "StartAngle": -270,
+            "EndAngle": 90,
+            "CapPrecision": "Butt",
+            "Alpha": 255,
+            "FileNameBackground": "__designer\\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.png",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 0,
+            "IndicatorPositionHeight": 0,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 33,
+            "Name": "PWMProgress",
+            "X": 68,
+            "Y": 200,
+            "Width": 104,
+            "Height": 104,
+            "Type": "CircleProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
             "Filename": "black_background.png",
             "Alpha": 255,
             "ScalingAlgorithm": "Nearest-neighbor",
@@ -20,44 +56,8 @@
             "Moveable": false
           },
           {
-            "Color": {
-              "Red": 255,
-              "Green": 0,
-              "Blue": 0
-            },
-            "CenterX": 52,
-            "CenterY": 52,
-            "Radius": 50,
-            "LineWidth": 0,
-            "StartAngle": 0,
-            "EndAngle": 360,
-            "CapPrecision": "Butt",
-            "Alpha": 255,
-            "FileNameBackground": "__designer\\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.png",
-            "IndicatorPositionX": 0,
-            "IndicatorPositionY": 0,
-            "IndicatorPositionWidth": 0,
-            "IndicatorPositionHeight": 0,
-            "ProgressRangeMin": 0,
-            "ProgressRangeMax": 100,
-            "ProgressRangeSteps": 0,
-            "ProgressRangeStepsMin": 0,
-            "ProgressInitialValue": 33,
-            "Name": "PWMProgress",
-            "X": 68,
-            "Y": 160,
-            "Width": 104,
-            "Height": 104,
-            "Type": "CircleProgress",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "TextId": "TempPeltier_txt",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 255,
               "Green": 0,
@@ -67,7 +67,7 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "PeltierTempText",
-            "X": 10,
+            "X": 205,
             "Y": 10,
             "Width": 29,
             "Height": 25,
@@ -80,7 +80,7 @@
           },
           {
             "TextId": "TempExt_Txt",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 255,
               "Green": 0,
@@ -90,8 +90,8 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "ExtTempText",
-            "X": 10,
-            "Y": 45,
+            "X": 161,
+            "Y": 10,
             "Width": 32,
             "Height": 25,
             "Type": "TextArea",
@@ -103,7 +103,7 @@
           },
           {
             "TextId": "TempPeltier",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 255,
               "Green": 0,
@@ -117,8 +117,8 @@
               "BufferSize": 3
             },
             "Name": "PeltierTemp",
-            "X": 100,
-            "Y": 10,
+            "X": 205,
+            "Y": 70,
             "Width": 32,
             "Height": 25,
             "Type": "TextArea",
@@ -130,7 +130,7 @@
           },
           {
             "TextId": "TempExt",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 255,
               "Green": 0,
@@ -144,8 +144,8 @@
               "BufferSize": 3
             },
             "Name": "ExtTemp",
-            "X": 100,
-            "Y": 45,
+            "X": 161,
+            "Y": 70,
             "Width": 32,
             "Height": 25,
             "Type": "TextArea",
@@ -157,7 +157,7 @@
           },
           {
             "TextId": "PWM_Txt",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 255,
               "Green": 0,
@@ -167,12 +167,12 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
+              "UseBuffer": true,
+              "BufferSize": 5
             },
             "Name": "PWMText",
-            "X": 70,
-            "Y": 114,
+            "X": 109,
+            "Y": 10,
             "Width": 84,
             "Height": 25,
             "Type": "TextArea",
@@ -183,179 +183,67 @@
             "Moveable": false
           },
           {
+            "RelativeFilename": "arrow_sx.png",
             "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "X": 27,
-                "Y": 12,
-                "Style": "Icon39",
-                "IconReleased": "__designer\\blue_icons_next_arrow_32.png",
-                "IconPressed": "__designer\\blue_icons_next_arrow_32.png"
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 70,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 0,
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Red": 0,
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Red": 0,
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ],
-            "Name": "PWMUpButton",
-            "X": 170,
-            "Y": 148,
-            "Width": 70,
-            "Height": 50,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "X": 27,
-                "Y": 12,
-                "Style": "Icon5",
-                "IconReleased": "__designer\\blue_icons_back_arrow_32.png",
-                "IconPressed": "__designer\\blue_icons_back_arrow_32.png"
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 70,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 0,
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Red": 0,
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Red": 0,
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ],
             "Name": "PWMDownButton",
-            "X": -2,
-            "Y": 148,
-            "Width": 70,
-            "Height": 50,
-            "Type": "FlexButton",
+            "X": 29,
+            "Y": 15,
+            "Width": 40,
+            "Height": 40,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
-            "Clickable": false,
+            "Clickable": true,
             "Fadeable": false,
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "RelativeFilename": "Start.png",
             "Alpha": 255,
-            "IconPressed": "__designer\\blue_icons_settings_48.png",
-            "IconReleased": "__designer\\blue_icons_settings_48.png",
-            "IconX": 62,
-            "IconY": 7,
-            "IconHeight": 46,
-            "IconWidth": 46,
-            "ButtonStyle": "Style4",
-            "IconStyle": "Icon58",
-            "Name": "SettingButton",
-            "X": 35,
-            "Y": 264,
-            "Width": 170,
-            "Height": 60,
-            "Type": "ButtonWithIcon",
+            "Name": "StartButton",
+            "X": 60,
+            "Y": 62,
+            "Width": 40,
+            "Height": 40,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
-            "Clickable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "Stop.png",
+            "Alpha": 255,
+            "Name": "StopButton",
+            "X": 9,
+            "Y": 62,
+            "Width": 40,
+            "Height": 40,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "arrow_dx.png",
+            "Alpha": 255,
+            "Name": "PWMUpButton",
+            "X": 29,
+            "Y": 109,
+            "Width": 40,
+            "Height": 40,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": true,
             "Fadeable": false,
             "Moveable": false
           }
         ],
-        "Interactions": [
-          {
-            "InteractionName": "PWM_Up",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "PWMUpButton",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "FunctionName": "PWMUPClicked",
-              "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "PWM_Down",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "PWMDownButton",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "FunctionName": "PWMDownClicked",
-              "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "SettingButton",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "Type": "ActionNone"
-            }
-          }
-        ],
+        "Interactions": [],
         "Name": "MainScreen",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 3600
@@ -479,7 +367,7 @@
           },
           {
             "TextId": "SingleUseId1",
-            "TextRotation": "0",
+            "TextRotation": "90",
             "Color": {
               "Red": 251,
               "Green": 0,

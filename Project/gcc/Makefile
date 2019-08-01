@@ -332,8 +332,8 @@ asm_source_files := \
 	$(makefile_path_relative)/startup_stm32f429xx.s
 
 # Compile time defines
-c_compiler_options += -DST -DSTM32F429xx -DUSE_OS_SYSTICK -DUSE_STM32F429I_DISCO -DHSE_VALUE=8000000 -DHAL_ADC_MODULE_ENABLED -DUSE_USBCDC -DUSE_HAL_DRIVER -DMBEDTLS_CONFIG_FILE="mbedtls_config.h" -D__packed="__attribute__((__packed__))" -D__weak="__attribute__((weak))"
-cpp_compiler_options +=  -DST -DSTM32F429xx -DUSE_OS_SYSTICK -DUSE_STM32F429I_DISC -DHSE_VALUE=8000000 -DHAL_ADC_MODULE_ENABLED -DUSE_USBCDC -DUSE_HAL_DRIVER -DMBEDTLS_CONFIG_FILE="mbedtls_config.h" -D__packed="__attribute__((__packed__))" -D__weak="__attribute__((weak))"
+c_compiler_options += -DST -DSTM32F429xx -DUSE_OS_SYSTICK -DUSE_STM32F429I_DISCO -DHSE_VALUE=8000000 -DHAL_ADC_MODULE_ENABLED -DUSE_USBCDC -DUSE_HAL_DRIVER -DMBEDTLS_CONFIG_FILE="mbedtls_config.h" -D__packed="__attribute__((__packed__))" -D__weak="__attribute__((weak))" -DUSE_USB
+cpp_compiler_options +=  -DST -DSTM32F429xx -DUSE_OS_SYSTICK -DUSE_STM32F429I_DISC -DHSE_VALUE=8000000 -DHAL_ADC_MODULE_ENABLED -DUSE_USBCDC -DUSE_HAL_DRIVER -DMBEDTLS_CONFIG_FILE="mbedtls_config.h" -D__packed="__attribute__((__packed__))" -D__weak="__attribute__((weak))" -DUSE_USB
 
 include_paths += platform/os $(board_include_paths) $(os_include_paths)
 

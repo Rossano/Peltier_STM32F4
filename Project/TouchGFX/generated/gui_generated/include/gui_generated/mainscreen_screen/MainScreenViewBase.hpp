@@ -7,9 +7,9 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
@@ -31,9 +31,9 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::ScalableImage background;
     touchgfx::CircleProgress PWMProgress;
     touchgfx::PainterRGB888 PWMProgressPainter;
+    touchgfx::ScalableImage background;
     touchgfx::TextArea PeltierTempText;
     touchgfx::TextArea ExtTempText;
     touchgfx::TextAreaWithOneWildcard PeltierTemp;
@@ -51,6 +51,8 @@ protected:
     touchgfx::Unicode::UnicodeChar PeltierTempBuffer[PELTIERTEMP_SIZE];
     static const uint16_t EXTTEMP_SIZE = 3;
     touchgfx::Unicode::UnicodeChar ExtTempBuffer[EXTTEMP_SIZE];
+    static const uint16_t PWMTEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar PWMTextBuffer[PWMTEXT_SIZE];
 
 private:
 

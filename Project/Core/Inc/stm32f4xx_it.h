@@ -23,6 +23,8 @@ void DMA2D_IRQHandler(void);
 void SysTick_Handler(void);
 void OTG_HS_IRQHandler(void);
 
+void TIM6_DAC_IRQHandler(void);
+
 #ifdef __cplusplus
 }
 #endif

@@ -35,6 +35,8 @@ using namespace touchgfx;
 #define PWM10_AVAILABLE	true
 
 /* Exported types ------------------------------------------------------------*/
+extern QueueHandle_t xLowLevelData;
+
 /* Exported constants --------------------------------------------------------*/
 /* User can use this section to tailor ADCx instance used and associated
    resources */

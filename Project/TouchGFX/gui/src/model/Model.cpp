@@ -1,7 +1,14 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
 
+#include <FreeRTOS.h>
+#include <queue.h>
+
 //uint16_t pwm_step = PWM_STEP;
+
+extern QueueHandle_t xLowLevelData;
+
+msg_t msg;
 
 Model::Model() : modelListener(0)
 {
@@ -9,17 +16,35 @@ Model::Model() : modelListener(0)
 
 void Model::tick()
 {
-	modelListener->notifyPWMChange(pwmPeltier);
+	//modelListener->notifyPWMChange(pwmPeltier);
+	//BaseType_t status;
+/*	if((status = xQueueReceive(xLowLevelData, &msg, 0)) == pdTRUE)
+	{
+		peltierTemperature = msg.peltier;
+		extTemperature = msg.ext;
+		pwmPeltier = msg.pwm;
+		if(modelListener != 0)
+		{
+			modelListener->notifyPeltierTemperature(peltierTemperature);
+			modelListener->notifyExternalTemperature(extTemperature);
+			modelListener->notifyPWMChange(pwmPeltier);
+		}
+	}*/
 }
 
-int8_t Model::getExtTemperature()
+float Model::getExtTemperature()
 {
-	return int8_t(extTemperature);
+	return float(extTemperature);
 }
 
-int8_t Model::getPeltierTemperature()
+float Model::getPeltierTemperature()
 {
-	return int8_t(peltierTemperature);
+	return float(peltierTemperature);
+}
+
+float Model::getInternalTempSensor()
+{
+	return float(internalTempSensor);
 }
 
 uint16_t Model::getPWM()
@@ -42,14 +67,19 @@ uint16_t Model::getPWMStep()
 	return uint16_t(pwm_step);
 }
 
-void Model::setExtTemperature(int8_t temperature)
+void Model::setExtTemperature(float temperature)
 {
 	extTemperature = temperature;
 }
 
-void Model::setPeltierTemperature(int8_t temperature)
+void Model::setPeltierTemperature(float temperature)
 {
 	peltierTemperature = temperature;
+}
+
+void Model::setInternalTempSensor(float temperature)
+{
+	internalTempSensor = temperature;
 }
 
 void Model::setPWM(uint16_t PWM)

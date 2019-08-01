@@ -1,1 +1,117 @@
 Converting images
+Compiling gui/src/settingscreen_screen/SettingScreenPresenter.cpp
+Compiling gui/src/settingscreen_screen/SettingScreenView.cpp
+Compiling gui/src/mainscreen_screen/MainScreenPresenter.cpp
+Compiling gui/src/model/Model.cpp
+Compiling gui/src/common/FrontendApplication.cpp
+Compiling gui/src/mainscreen_screen/MainScreenView.cpp
+Compiling generated/gui_generated/src/settingscreen_screen/SettingScreenViewBase.cpp
+Compiling generated/gui_generated/src/splashscreen_screen/SplashScreenViewBase.cpp
+Compiling gui/src/splashscreen_screen/SplashScreenPresenter.cpp
+Compiling gui/src/splashscreen_screen/SplashScreenView.cpp
+gui/src/model/Model.cpp:4:22: fatal error: FreeRTOS.h: No such file or directory
+ #include <FreeRTOS.h>
+                      ^
+compilation terminated.
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/model/Model.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/model/Model.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from gui/src/common/FrontendApplication.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/settingscreen_screen/SettingScreenViewBase.hpp:7,
+                 from gui/include/gui/settingscreen_screen/SettingScreenView.hpp:4,
+                 from gui/src/settingscreen_screen/SettingScreenPresenter.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+cc1plus.exe: all warnings being treated as errors
+cc1plus.exe: all warnings being treated as errors
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/settingscreen_screen/SettingScreenViewBase.hpp:7,
+                 from gui/include/gui/settingscreen_screen/SettingScreenView.hpp:4,
+                 from gui/src/settingscreen_screen/SettingScreenView.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp:7,
+                 from gui/include/gui/mainscreen_screen/MainScreenView.hpp:4,
+                 from gui/src/mainscreen_screen/MainScreenView.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp:7,
+                 from gui/include/gui/mainscreen_screen/MainScreenView.hpp:4,
+                 from gui/src/mainscreen_screen/MainScreenPresenter.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+cc1plus.exe: all warnings being treated as errors
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o] Error 1
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/settingscreen_screen/SettingScreenPresenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/settingscreen_screen/SettingScreenPresenter.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/splashscreen_screen/SplashScreenViewBase.hpp:7,
+                 from gui/include/gui/splashscreen_screen/SplashScreenView.hpp:4,
+                 from gui/src/splashscreen_screen/SplashScreenView.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/settingscreen_screen/SettingScreenViewBase.hpp:7,
+                 from generated/gui_generated/src/settingscreen_screen/SettingScreenViewBase.cpp:4:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+cc1plus.exe: all warnings being treated as errors
+cc1plus.exe: all warnings being treated as errors
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/settingscreen_screen/SettingScreenView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/settingscreen_screen/SettingScreenView.o] Error 1
+cc1plus.exe: all warnings being treated as errors
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/splashscreen_screen/SplashScreenViewBase.hpp:7,
+                 from generated/gui_generated/src/splashscreen_screen/SplashScreenViewBase.cpp:4:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+cc1plus.exe: all warnings being treated as errors
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenPresenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenPresenter.o] Error 1
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/splashscreen_screen/SplashScreenView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/splashscreen_screen/SplashScreenView.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/splashscreen_screen/SplashScreenViewBase.hpp:7,
+                 from gui/include/gui/splashscreen_screen/SplashScreenView.hpp:4,
+                 from gui/src/splashscreen_screen/SplashScreenPresenter.cpp:1:
+gui/include/gui/model/Model.hpp:87:3: error: 'msg' defined but not used [-Werror=unused-variable]
+ } msg;
+   ^~~
+cc1plus.exe: all warnings being treated as errors
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/mainscreen_screen/MainScreenView.o] Error 1
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/generated/gui_generated/src/settingscreen_screen/SettingScreenViewBase.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/generated/gui_generated/src/settingscreen_screen/SettingScreenViewBase.o] Error 1
+cc1plus.exe: all warnings being treated as errors
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/splashscreen_screen/SplashScreenPresenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/splashscreen_screen/SplashScreenPresenter.o] Error 1
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/generated/gui_generated/src/splashscreen_screen/SplashScreenViewBase.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/generated/gui_generated/src/splashscreen_screen/SplashScreenViewBase.o] Error 1
+simulator/gcc/Makefile:179: recipe for target 'generate_assets' failed
+make[1]: *** [generate_assets] Error 2
+simulator/gcc/Makefile:40: recipe for target 'all' failed
+make: *** [all] Error 2

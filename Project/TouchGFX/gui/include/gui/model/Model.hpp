@@ -45,8 +45,9 @@ public:
 	/**
 	 * Functions to get UI elements that are protected in the model
 	 */
-	int8_t getExtTemperature();
-	int8_t getPeltierTemperature();
+	float getExtTemperature();
+	float getPeltierTemperature();
+	float getInternalTempSensor();
 	uint16_t getPWM();
 	bool getPWMState();
 	bool getPWMAuto();
@@ -55,8 +56,9 @@ public:
 	/**
 	* Functions to get UI elements that are protected in the model
 	*/
-	void setExtTemperature(int8_t);
-	void setPeltierTemperature(int8_t);
+	void setExtTemperature(float);
+	void setPeltierTemperature(float);
+	void setInternalTempSensor(float);
 	void setPWM(uint16_t);
 	void setPWMState(bool);
 	void setPWMAuto(bool);
@@ -69,11 +71,20 @@ protected:
     ModelListener* modelListener;
 
 	uint16_t pwmPeltier = 0;
-	int8_t peltierTemperature = 25;
-	int8_t extTemperature = 25;
+	float peltierTemperature = 25.0;
+	float extTemperature = 25.0;
+	float internalTempSensor = 25.0;
 	bool peltierActive = false;
 	bool peltierAuto = false;
 	uint16_t pwm_step = PWM_STEP;
 };
+
+typedef struct
+{
+	float peltier;
+	float ext;
+	uint16_t pwm;
+} msg_t;
+extern msg_t msg;
 
 #endif /* MODEL_HPP */

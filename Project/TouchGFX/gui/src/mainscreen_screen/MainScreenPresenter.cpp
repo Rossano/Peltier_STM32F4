@@ -79,3 +79,18 @@ void MainScreenPresenter::pwmChange()
 {
 	view.notifyPWMChange(model->getPWM());
 }
+
+void MainScreenPresenter::notifyPeltierTemperature(float temperature)
+{
+	view.notifyExternalTemperature(model->getInternalTempSensor());
+}
+
+void MainScreenPresenter::notifyExternalTemperature(float temperature)
+{
+	view.notifyExternalTemperature(model->getExtTemperature());
+}
+
+void MainScreenPresenter::notifyInternalTempSensorChange()
+{
+
+}

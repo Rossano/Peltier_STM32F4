@@ -23,17 +23,26 @@
 
 #include <stdlib.h>
 
+#include <gui/mainscreen_screen/MainScreenView.hpp>
+#include <gui\model\Model.hpp>
+
+
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+TIM_HandleTypeDef htim6;
+TIM_HandleTypeDef htim8;
+TIM_HandleTypeDef htim9;
 TIM_HandleTypeDef htim10;
 
 uint16_t pwm10_level;
 
-uint8_t lineBuf[SHELL_MAX_LINE_LENGTH];
+//uint8_t lineBuf[SHELL_MAX_LINE_LENGTH];
+cdc_buf_t lineBuf;
 bool bEOL = false;
 uint8_t lenghtBuf = 0;
+QueueHandle_t xLowLevelData;
 
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
@@ -41,6 +50,10 @@ PeltierApplication::PeltierApplication() {
 	MX_GPIO_Init();
 	MX_ADC1_Init();
 	MX_TIM10_Init();
+
+	// Create Lowlevel queue
+	xQueueCreate(3, sizeof(msg));
+
 	/* USER CODE BEGIN RTOS_MUTEX */
 	  /* add mutexes, ... */
 	  /* USER CODE END RTOS_MUTEX */
@@ -380,11 +393,25 @@ void PeltierApplication::StartDefaultTask(void const * argument)
 	  MX_USB_DEVICE_Init();
   /* Infinite loop */
 	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+	  float temperature;
   for(;;)
   {
     //osDelay(1);
-	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
-	  HAL_Delay(500);
+//	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+//	  HAL_Delay(500);
+	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+	  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
+//	  model->setPeltierTemperature((temperature - 760) / 2.5 + 25);
+	  msg.peltier = temperature;
+	  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
+	  msg.ext = temperature;
+	  msg.pwm = 128;
+	  BaseType_t status;
+	  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
+	  {
+
+	  }
+	  osDelay(500);
   }
   /* USER CODE END 5 */
 }
@@ -498,6 +525,8 @@ uint16_t clip8(uint16_t level)
 void CDC_ReceiveCallback(uint8_t *Buf, uint32_t *Len)
 {
 	//CDC_Transmit_HS(Buf, 1);//(uint16_t *)Len);
+	const TickType_t ticks = pdMS_TO_TICKS(10000); //portMAX_DELAY;
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 	///
 	///	Checkif it is an EOL, in that case push the command in the rx FIFO for the shell
 	///
@@ -511,10 +540,12 @@ void CDC_ReceiveCallback(uint8_t *Buf, uint32_t *Len)
 		uint32_t foo = lenghtBuf + 2;
 		CDC_Transmit_HS(lineBuf, foo);
 		CDC_Transmit_HS((uint8_t *)"\r\nSTM32> ", 9);
-		lineBuf[lenghtBuf] = 0;
+		//lineBuf[lenghtBuf] = 0;
+		//lineBuf[lenghtBuf+1] = 0;
+		for(uint8_t i=lenghtBuf; i<SHELL_MAX_LINE_LENGTH; i++) lineBuf[i] = 0;
 		//	Send the string into the rx FIFO
 		BaseType_t xStatus;
-		xStatus = xQueueSendToBackFromISR(xUsb_rx, lineBuf, pdFALSE);
+		xStatus = xQueueSendToBackFromISR(xUsb_rx, lineBuf, &xHigherPriorityTaskWoken);
 		if(xStatus != pdPASS)
 		{
 			/// Error

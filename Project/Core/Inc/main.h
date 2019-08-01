@@ -45,6 +45,9 @@ extern "C" {
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
 
+#define ADC_FULL_SCALE		4095
+#define ADC_CHANNELS		3
+
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
@@ -248,8 +251,14 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 
 #define MAX_BUF_LENGTH		32
+#define SHELL_MAX_LINE_LENGTH	16
+#define SHELL_MAX_ARGUMENTS		4
+#define SHELL_PROMPT			"STM32> "
+#define FW_VERSION				"0.4.0.0"
+#define OS_VERSION				"9.0.0"
+#define CR						"\r\n"
 
-typedef uint8_t cdc_buf_t[MAX_BUF_LENGTH];
+typedef uint8_t cdc_buf_t[SHELL_MAX_LINE_LENGTH]; //[MAX_BUF_LENGTH];
 
 extern uint8_t usb_cdc_rx_char;
 extern cdc_buf_t usb_cdc_buffer;
@@ -257,6 +266,7 @@ extern uint8_t newCmd;
 extern uint8_t new_char_on_usb;
 extern QueueHandle_t xUsb_tx, xUsb_rx;
 
+extern uint16_t adcBuffer[ADC_CHANNELS];
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

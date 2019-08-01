@@ -37,6 +37,12 @@ public:
 	void notifyAuto(bool);
 	void notifyManual(bool);
 	void notifyPWMChange(uint16_t);
+	void peltierTempChange();
+	void extTempChange();
+	void pwmChange();
+	virtual void notifyPeltierTemperature(float temperature);
+	virtual void notifyExternalTemperature(float temperature);
+	virtual void notifyInternalTempSensorChange();
 
 	///
 	///	Event Handlers
@@ -54,9 +60,6 @@ private:
 
     MainScreenView& view;
 
-	void peltierTempChange();
-	void extTempChange();
-	void pwmChange();
 };
 
 

@@ -31,8 +31,9 @@ public:
 	/**
 	 * Virtual Functions to update UI
 	 */
-	virtual void notifyPeltierTemperature(int8_t temperature) { }
-	virtual void notifyExternalTemperature(int8_t temperature) { }
+	virtual void notifyPeltierTemperature(float temperature) { }
+	virtual void notifyExternalTemperature(float temperature) { }
+	virtual void notifyInternalTempSensorChange() {}
 	virtual void notifyPWMChange(uint16_t pwm) { }
 	/*virtual void notifyPWMStart();
 	virtual void notifyPWMStop();

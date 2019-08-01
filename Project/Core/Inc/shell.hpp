@@ -9,13 +9,13 @@
 #define SHELL_H_
 
 //#define NULL					0
-#define SHELL_MAX_LINE_LENGTH	16
+/*#define SHELL_MAX_LINE_LENGTH	16
 #define SHELL_MAX_ARGUMENTS		4
 #define SHELL_PROMPT			"STM32> "
-#define FW_VERSION				"0.1.0.0"
+#define FW_VERSION				"0.4.0.0"
 #define OS_VERSION				"9.0.0"
 #define CR						"\r\n"
-
+*/
 //	Function prototype for the action executed by the shell
 typedef void (* shellcmd_t)(int argc, char *argv[]);
 //

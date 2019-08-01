@@ -1103,29 +1103,26 @@
             <group>
               <name>__designer</name>
               <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small.cpp</name>
-              </file>
-              <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_buttons_round_edge_small_pressed.cpp</name>
-              </file>
-              <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_icons_back_arrow_32.cpp</name>
-              </file>
-              <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_icons_next_arrow_32.cpp</name>
-              </file>
-              <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_icons_settings_48.cpp</name>
-              </file>
-              <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</name>
               </file>
             </group>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Arrow_Dx.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Arrow_Sx.cpp</name>
+            </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
             </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\black_background.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Start.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Stop.cpp</name>
             </file>
           </group>
           <group>
