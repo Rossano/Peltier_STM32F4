@@ -56,6 +56,8 @@ using namespace touchgfx;
 #include "core_cm4.h"
 
 #include <stdio.h>
+
+#include <gui\model\Model.hpp>
 /**
  * Define the FreeRTOS task priorities and stack sizes
  */
@@ -88,16 +90,19 @@ extern TIM_HandleTypeDef htim9;
 void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base);
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim_base);
 
+
 static void GUITask(void* params)
 {
     touchgfx::HAL::getInstance()->taskEntry();
 }
 
+#if 0
 static void DefaultTask(void *p)
 {
 	void const *foo;
 	appli->StartDefaultTask(foo);
 }
+#endif
 
 static void ShellTask(void *p)
 {
@@ -141,6 +146,7 @@ static void xStartDefaultTask(void * argument)
   ///	Print the PROMPT
   ///
   CDC_Transmit_HS((uint8_t*)"\r\nSTM32> ", 9);
+  float temperature;
   for(;;)
   {
     //osDelay(1);
@@ -193,6 +199,20 @@ static void xStartDefaultTask(void * argument)
 	  }
 #endif
 //	  HAL_Delay(500);
+
+		  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+		  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
+		  msg.peltier = temperature;
+		  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
+		  msg.ext = temperature;
+		  msg.pwm = 128;
+		  BaseType_t status;
+		  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
+		  {
+
+		  }
+		  //osDelay(500);
+		  HAL_Delay(500);
   }
   /* USER CODE END 5 */
 }
@@ -445,7 +465,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
@@ -464,7 +484,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -473,13 +493,16 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_5;
   sConfig.Rank = 2;
+  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
+  sConfig.Channel = ADC_CHANNEL_10;
   sConfig.Rank = 3;
+  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -490,6 +513,58 @@ static void MX_ADC1_Init(void)
 
 }
 
+void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
+{
+
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(adcHandle->Instance==ADC1)
+  {
+  /* USER CODE BEGIN ADC1_MspInit 0 */
+
+  /* USER CODE END ADC1_MspInit 0 */
+    /* ADC1 clock enable */
+    __HAL_RCC_ADC1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**ADC1 GPIO Configuration
+    PC3     ------> ADC1_IN13
+    PA5     ------> ADC1_IN5
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_3;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_5;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* ADC1 DMA Init */
+    /* ADC1 Init */
+    hdma_adc1.Instance = DMA2_Stream0;
+    hdma_adc1.Init.Channel = DMA_CHANNEL_0;
+    hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_adc1.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_adc1.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_adc1.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_adc1.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_adc1.Init.Mode = DMA_CIRCULAR;
+    hdma_adc1.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_adc1.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_adc1) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(adcHandle,DMA_Handle,hdma_adc1);
+
+  /* USER CODE BEGIN ADC1_MspInit 1 */
+
+  /* USER CODE END ADC1_MspInit 1 */
+  }
+}
 
 PeltierApplication *appli = new PeltierApplication();
 int main(void)
@@ -512,6 +587,8 @@ int main(void)
     printf("Init USB\n");
 #endif
 #endif
+
+    HAL_ADC_MspInit(&hadc1);
 
 //    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
 

@@ -47,12 +47,12 @@ QueueHandle_t xLowLevelData;
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
 
-	MX_GPIO_Init();
-	MX_ADC1_Init();
-	MX_TIM10_Init();
+//	MX_GPIO_Init();
+//	MX_ADC1_Init();
+//	MX_TIM10_Init();
 
 	// Create Lowlevel queue
-	xQueueCreate(3, sizeof(msg));
+	xLowLevelData = xQueueCreate(3, sizeof(msg));
 
 	/* USER CODE BEGIN RTOS_MUTEX */
 	  /* add mutexes, ... */
@@ -103,6 +103,7 @@ PeltierApplication::~PeltierApplication() {
 	// TODO Auto-generated destructor stub
 }
 
+#if 0
 void PeltierApplication::MX_GPIO_Init()
 {
 //	 GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -353,6 +354,7 @@ void PeltierApplication::MX_TIM10_Init(void)
   //HAL_TIM_MspPostInit(&htim10);
 
 }
+#endif
 
 #if 0
 void PeltierApplication::MX_USB_DEVICE_Init()
@@ -376,6 +378,7 @@ void PeltierApplication::MX_USB_DEVICE_Init()
 }
 #endif
 
+#if 0
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**
   * @brief  Function implementing the defaultTask thread.
@@ -470,6 +473,7 @@ void PeltierApplication::StartCoreTask(void const * argument)
   }
   /* USER CODE END StartCoreTask */
 }
+#endif
 
 void Error_Handler(void)
 {
@@ -878,8 +882,10 @@ void vPwmSet(int argc, char *argv[])
 void ADCInit(int argc, char *argv[])
 {
 	// Configure the ADC 1
-	appli->MX_ADC1_Init();
-
+//	appli->MX_ADC1_Init();
+#if 0
+	MX_ADC1_Init();
+#endif
 	// Configure the GPIO to supply the temperature sensor
 
 }
@@ -932,7 +938,7 @@ uint16_t PeltierApplication::GetPWM10()
 /// </summary>
 void PeltierApplication::InitPWM10()
 {
-	MX_TIM10_Init();
+//	MX_TIM10_Init();
 }
 
 /// <summary>
@@ -1037,11 +1043,26 @@ static void xStartDefaultTask(void * argument)
 //	  MX_USB_DEVICE_Init();
   /* Infinite loop */
 	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+	  float temperature;
   for(;;)
   {
     //osDelay(1);
-	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
-	  HAL_Delay(500);
+//	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+//	  HAL_Delay(500);
+	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+	  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
+//	  model->setPeltierTemperature((temperature - 760) / 2.5 + 25);
+	  msg.peltier = temperature;
+	  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
+	  msg.ext = temperature;
+	  msg.pwm = 128;
+	  BaseType_t status;
+	  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
+	  {
+
+	  }
+	  osDelay(500);
+
   }
   /* USER CODE END 5 */
 }

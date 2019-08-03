@@ -60,6 +60,11 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+static void MX_GPIO_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_DMA_Init(void);
+static void MX_TIM8_Init(void);
+static void MX_TIM9_Init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

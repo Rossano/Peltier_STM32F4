@@ -17,8 +17,8 @@ Model::Model() : modelListener(0)
 void Model::tick()
 {
 	//modelListener->notifyPWMChange(pwmPeltier);
-	//BaseType_t status;
-/*	if((status = xQueueReceive(xLowLevelData, &msg, 0)) == pdTRUE)
+	BaseType_t status;
+	if((status = xQueueReceive(xLowLevelData, &msg, 0)) == pdTRUE)
 	{
 		peltierTemperature = msg.peltier;
 		extTemperature = msg.ext;
@@ -29,7 +29,7 @@ void Model::tick()
 			modelListener->notifyExternalTemperature(extTemperature);
 			modelListener->notifyPWMChange(pwmPeltier);
 		}
-	}*/
+	}
 }
 
 float Model::getExtTemperature()
