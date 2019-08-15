@@ -1,0 +1,13 @@
+Compiling simulator/main.cpp
+Compiling generated/texts/src/Texts.cpp
+gui/src/model/Model.cpp:4:22: fatal error: FreeRTOS.h: No such file or directory
+ #include <FreeRTOS.h>
+                      ^
+compilation terminated.
+simulator/gcc/Makefile:217: recipe for target 'build/MINGW32_NT-6.2/gui/src/model/Model.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/model/Model.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+simulator/gcc/Makefile:179: recipe for target 'generate_assets' failed
+make[1]: *** [generate_assets] Error 2
+simulator/gcc/Makefile:40: recipe for target 'all' failed
+make: *** [all] Error 2
