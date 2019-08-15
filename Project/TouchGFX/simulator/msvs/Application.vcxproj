@@ -183,6 +183,7 @@
     <ClInclude Include="..\..\gui\include\gui\splashscreen_screen\SplashScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\splashscreen_screen\SplashScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\splashscreen_screen\SplashScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\MainScreenViewBase_OLD.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\touchgfx.rc"/>

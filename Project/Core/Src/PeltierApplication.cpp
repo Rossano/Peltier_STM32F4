@@ -27,6 +27,8 @@
 #include <gui\model\Model.hpp>
 
 
+#define VSENSE									( 3.3f / 4095 )
+
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
@@ -43,6 +45,10 @@ cdc_buf_t lineBuf;
 bool bEOL = false;
 uint8_t lenghtBuf = 0;
 QueueHandle_t xLowLevelData;
+
+extern uint16_t adcBuffer[ADC_CHANNELS];
+uint16_t buffer[ADC_CHANNELS];
+float temperature;
 
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
@@ -1049,8 +1055,9 @@ static void xStartDefaultTask(void * argument)
     //osDelay(1);
 //	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
 //	  HAL_Delay(500);
-	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
-	  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
+	  /** HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);*/
+	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)buffer, ADC_CHANNELS);
+	  temperature  = ((float) adcBuffer[0] / ADC_FULL_SCALE * 3300);
 //	  model->setPeltierTemperature((temperature - 760) / 2.5 + 25);
 	  msg.peltier = temperature;
 	  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
@@ -1065,4 +1072,14 @@ static void xStartDefaultTask(void * argument)
 
   }
   /* USER CODE END 5 */
+}
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+/*	for (int i =0; i<3; i++)
+	{
+	   adcBuffer[i] = buffer[i];  // store the values in adc[]
+	}
+*/
+    temperature = (((adcBuffer[0]*VSENSE)-.76)/.0025)+25;
 }

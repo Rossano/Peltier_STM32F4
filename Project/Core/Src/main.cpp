@@ -71,6 +71,7 @@ using namespace touchgfx;
 #define TIM_AUTORELOAD_PRELOAD_DISABLE                0x00000000U               /*!< TIMx_ARR register is not buffered */
 #define TIM_AUTORELOAD_PRELOAD_ENABLE                 TIM_CR1_ARPE              /*!< TIMx_ARR register is buffered */
 
+#define VSENSE									( 3.3f / 1023 )
 //#define USE_USB
 
 /*uint8_t usb_cdc_rx_char;
@@ -201,7 +202,7 @@ static void xStartDefaultTask(void * argument)
 //	  HAL_Delay(500);
 
 		  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
-		  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
+		  temperature  = ((float) adcBuffer[0] / ADC_FULL_SCALE * 3300);
 		  msg.peltier = temperature;
 		  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
 		  msg.ext = temperature;
@@ -468,10 +469,10 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE; //DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
-  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIGCONV_T8_TRGO;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.NbrOfConversion = 3;
   hadc1.Init.DMAContinuousRequests = ENABLE;
@@ -484,7 +485,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = 1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -493,16 +494,16 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_5;
   sConfig.Rank = 2;
-  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_10;
+  sConfig.Channel = ADC_CHANNEL_13;
   sConfig.Rank = 3;
-  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
+  sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -561,7 +562,8 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     __HAL_LINKDMA(adcHandle,DMA_Handle,hdma_adc1);
 
   /* USER CODE BEGIN ADC1_MspInit 1 */
-
+    HAL_NVIC_SetPriority(ADC_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(ADC_IRQn);
   /* USER CODE END ADC1_MspInit 1 */
   }
 }
@@ -573,8 +575,8 @@ int main(void)
 //    MX_GPIO_Init();
     MX_TIM8_Init();
     MX_TIM9_Init();
-//    MX_DMA_Init();
-//    MX_ADC1_Init();
+    MX_DMA_Init();
+    MX_ADC1_Init();
 #ifdef PRINTF_DBG
     printf("Init HW & GPIO\n");
 #endif
@@ -590,7 +592,8 @@ int main(void)
 
     HAL_ADC_MspInit(&hadc1);
 
-//    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
 
     touchgfx_init();
 #ifdef PRINTF_DBG
@@ -615,11 +618,13 @@ int main(void)
     for (;;);
 }
 
+#if 0
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
 	//int data_ready = 1;
 	HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
 }
+#endif
 
 ///**
 //  * @brief  Period elapsed callback in non blocking mode

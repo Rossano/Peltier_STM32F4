@@ -697,6 +697,9 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\splashscreen_screen\SplashScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\splashscreen_screen</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\MainScreenViewBase_OLD.hpp">
+      <Filter>Header Files\generated\gui_generated\mainscreen_screen</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\touchgfx.rc">

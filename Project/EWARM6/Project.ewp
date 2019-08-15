@@ -1041,6 +1041,9 @@
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\ApplicationFontProvider.cpp</name>
             </file>
             <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_times_20_4bpp.cpp</name>
+            </file>
+            <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_10_4bpp.cpp</name>
             </file>
             <file>
@@ -1053,6 +1056,9 @@
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\FontGetters.cpp</name>
             </file>
             <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_times_20_4bpp.cpp</name>
+            </file>
+            <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_10_4bpp.cpp</name>
             </file>
             <file>
@@ -1060,6 +1066,9 @@
             </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_40_4bpp.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_times_20_4bpp.cpp</name>
             </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
@@ -1104,6 +1113,9 @@
               <name>__designer</name>
               <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</name>
+              </file>
+              <file>
+                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_progressindicators_fill_medium_circle_indicator_fill_line_full.cpp</name>
               </file>
             </group>
             <file>

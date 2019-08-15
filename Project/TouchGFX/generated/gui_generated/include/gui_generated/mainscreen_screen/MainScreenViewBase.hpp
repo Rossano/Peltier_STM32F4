@@ -7,9 +7,9 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
-#include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
@@ -31,9 +31,9 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::CircleProgress PWMProgress;
-    touchgfx::PainterRGB888 PWMProgressPainter;
     touchgfx::ScalableImage background;
+    touchgfx::CircleProgress PWMProgress;
+    touchgfx::PainterRGB888Bitmap PWMProgressPainter;
     touchgfx::TextArea PeltierTempText;
     touchgfx::TextArea ExtTempText;
     touchgfx::TextAreaWithOneWildcard PeltierTemp;

@@ -3,28 +3,29 @@
 /*********************************************************************************/
 #include <gui_generated/mainscreen_screen/MainScreenViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/Color.hpp>
 
 MainScreenViewBase::MainScreenViewBase()
 {
     CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
+    background.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
+    background.setPosition(0, 0, 240, 320);
+    background.setScalingAlgorithm(ScalableImage::NEAREST_NEIGHBOR);
+
     PWMProgress.setXY(68, 200);
     PWMProgress.setProgressIndicatorPosition(0, 0, 104, 104);
     PWMProgress.setRange(0, 100);
     PWMProgress.setCenter(52, 52);
-    PWMProgress.setRadius(50);
-    PWMProgress.setLineWidth(0);
-    PWMProgress.setStartEndAngle(-270, 90);
+    PWMProgress.setRadius(42);
+    PWMProgress.setLineWidth(16);
+    PWMProgress.setStartEndAngle(0, 360);
+    PWMProgress.setCapPrecision(180);
     PWMProgress.setBackground(Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_CIRCLE_INDICATOR_BG_LINE_FULL_ID));
-    PWMProgressPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    PWMProgressPainter.setBitmap(Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_MEDIUM_CIRCLE_INDICATOR_FILL_LINE_FULL_ID));
     PWMProgress.setPainter(PWMProgressPainter);
     PWMProgress.setValue(33);
-
-    background.setBitmap(Bitmap(BITMAP_BLACK_BACKGROUND_ID));
-    background.setPosition(0, 0, 240, 320);
-    background.setScalingAlgorithm(ScalableImage::NEAREST_NEIGHBOR);
 
     PeltierTempText.setXY(205, 10);
     PeltierTempText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
@@ -77,8 +78,8 @@ MainScreenViewBase::MainScreenViewBase()
     PWMUpButton.setXY(29, 109);
     PWMUpButton.setBitmap(Bitmap(BITMAP_ARROW_DX_ID));
 
-    add(PWMProgress);
     add(background);
+    add(PWMProgress);
     add(PeltierTempText);
     add(ExtTempText);
     add(PeltierTemp);

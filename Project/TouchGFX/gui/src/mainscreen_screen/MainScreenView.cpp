@@ -58,6 +58,7 @@ void MainScreenView::notifyPeltierTemperature(float temperature)
 void MainScreenView::notifyExternalTemperature(float temperature)
 {
 	Unicode::itoa((uint16_t)temperature, ExtTempBuffer, EXTTEMP_SIZE, 10);
+//	Unicode::snprintf(ExtTempBuffer, 10, "%d", (uint16_t)temperature);
 	ExtTempText.invalidate();
 }
 
@@ -65,5 +66,6 @@ void MainScreenView::notifyPWMChange(uint16_t pwm)
 {
 	PWMProgress.setValue(pwm);
 	Unicode::itoa(pwm, PWMTextBuffer, PWMTEXT_SIZE, 10);
+//	Unicode::snprintf(PWMTextBuffer, 10, "%d", pwm);
 	PWMText.invalidate();
 }
