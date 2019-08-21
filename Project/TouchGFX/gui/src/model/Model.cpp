@@ -1,14 +1,25 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
 
+#if defined(WIN32) || defined (_WIN32)
+
+#else
 #include <FreeRTOS.h>
 #include <queue.h>
+#endif
 
 //uint16_t pwm_step = PWM_STEP;
 
+#if defined(WIN32) || defined(_WIN32)
+#else
 extern QueueHandle_t xLowLevelData;
+#endif
 
 msg_t msg;
+
+controlMode_t controlMode;
+
+//char dummy[] = TEXT("-0123456789"); // { '-', '0', "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 Model::Model() : modelListener(0)
 {
@@ -17,6 +28,17 @@ Model::Model() : modelListener(0)
 void Model::tick()
 {
 	//modelListener->notifyPWMChange(pwmPeltier);
+#if defined(WIN32) || defined(_WIN32)
+	peltierTemperature = 22.5f;
+	extTemperature = 23.0f;
+	//pwmPeltier = 50;
+	if (modelListener != 0)
+	{
+		modelListener->notifyPeltierTemperature(peltierTemperature);
+		modelListener->notifyExternalTemperature(extTemperature);
+		modelListener->notifyPWMChange(pwmPeltier);
+	}
+#else
 	BaseType_t status;
 	if((status = xQueueReceive(xLowLevelData, &msg, 0)) == pdTRUE)
 	{
@@ -30,6 +52,7 @@ void Model::tick()
 			modelListener->notifyPWMChange(pwmPeltier);
 		}
 	}
+#endif
 }
 
 float Model::getExtTemperature()
@@ -92,12 +115,34 @@ void Model::setPWMState(bool state)
 	peltierActive = state;
 }
 
-void Model::setPWMAuto(bool state)
+/*void Model::setPWMAuto(bool state)
 {
 	peltierAuto = state;
+}*/
+
+bool Model::isAutoMode()
+{
+	if (controlMode == controlMode_t::AUTO) return true;
+	else return false;
 }
 
 void Model::setPWMStep(uint16_t val)
 {
 	pwm_step = val;
 }
+
+void Model::setPWMMode(bool mode)
+{
+	if (mode)
+	{
+		controlMode = controlMode_t::AUTO;
+	}
+	else {
+		controlMode = controlMode_t::MANUAL;
+	}
+}
+/*
+void Model::setManualMode()
+{
+	controlMode = controlMode_t::MANUAL;
+}*/

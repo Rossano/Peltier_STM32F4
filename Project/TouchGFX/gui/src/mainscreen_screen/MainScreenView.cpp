@@ -4,12 +4,17 @@
 MainScreenView::MainScreenView():PWMUpClickedCallback(this, &MainScreenView::PWMUPClicked),
 	PWMDownClickedCallback(this, &MainScreenView::PWMDownClicked),
 	PWMStartClickedCallback(this, &MainScreenView::PWMStartClicked),
-	PWMStopClickedCallback(this, &MainScreenView::PWMStopClicked)
+	PWMStopClickedCallback(this, &MainScreenView::PWMStopClicked),
+	AutoModeClickedCallback(this, &MainScreenView::PWMAutoClicked),
+	ManualModelClickCallback(this, &MainScreenView::PWMManualClicked)
 {
 	PWMUpButton.setClickAction(PWMUpClickedCallback);
 	PWMDownButton.setClickAction(PWMDownClickedCallback);
 	StartButton.setClickAction(PWMStartClickedCallback);
 	StopButton.setClickAction(PWMStopClickedCallback);
+	AutoMode.setClickAction(AutoModeClickedCallback);
+	manualMode.setClickAction(ManualModelClickCallback);
+	
 }
 
 void MainScreenView::setupScreen()
@@ -46,26 +51,64 @@ void MainScreenView::PWMStopClicked(const Image &b, const ClickEvent &e)
 
 void MainScreenView::PWMAutoClicked(const Image &b, const ClickEvent &e)
 {
-	presenter->notifyAuto(true);
+	//presenter->notifyAuto();
+	//notifyPWMAutoMode();
+	presenter->notifyManual();
+	notifyPWMManualMode();
+}
+
+void MainScreenView::PWMManualClicked(const Image & b, const ClickEvent & e)
+{
+	//presenter->notifyManual();
+	//notifyPWMManualMode();
+	presenter->notifyAuto();
+	notifyPWMAutoMode();
 }
 
 void MainScreenView::notifyPeltierTemperature(float temperature)
 {
-	Unicode::itoa((uint16_t)temperature, PeltierTempBuffer, PELTIERTEMP_SIZE, 10);
+//	Unicode::itoa((uint16_t)temperature, PeltierTempBuffer, PELTIERTEMP_SIZE, 10);
+	//Unicode::snprintf(pel, 5, "%d", (uint16_t)temperature);
+	PeltierTemp.resizeToCurrentText();
 	PeltierTempText.invalidate();
 }
 
 void MainScreenView::notifyExternalTemperature(float temperature)
 {
-	Unicode::itoa((uint16_t)temperature, ExtTempBuffer, EXTTEMP_SIZE, 10);
-//	Unicode::snprintf(ExtTempBuffer, 10, "%d", (uint16_t)temperature);
-	ExtTempText.invalidate();
+//	Unicode::itoa((uint16_t)temperature, ExtTempBuffer, EXTTEMP_SIZE, 10);
+	Unicode::snprintf(ExtTempBuffer, 10, "%d", (uint16_t)temperature);
+	ExtTemp.resizeToCurrentText();
+	ExtTemp.invalidate();
 }
 
 void MainScreenView::notifyPWMChange(uint16_t pwm)
 {
-	PWMProgress.setValue(pwm);
-	Unicode::itoa(pwm, PWMTextBuffer, PWMTEXT_SIZE, 10);
-//	Unicode::snprintf(PWMTextBuffer, 10, "%d", pwm);
+	PWMProgress.setValue((int)pwm);
+	double val = (double)pwm * 100 / MAX_PWM;
+//	Unicode::itoa(pwm, PWMTextBuffer, PWMTEXT_SIZE, 10);
+	Unicode::snprintf(PWMTextBuffer, 6, "%d", (uint16_t)val);
+	PWMText.setVisible(false);
 	PWMText.invalidate();
+	PWMText.setVisible(true);
+	PWMText.resizeToCurrentText();
+	PWMText.invalidate();
+	PWMProgress.invalidate();
+}
+
+void MainScreenView::notifyPWMManualMode()
+{
+	presenter->notifyManual();
+	AutoMode.setVisible(false);
+	AutoMode.invalidate();
+	manualMode.setVisible(true);
+	manualMode.invalidate();
+}
+
+void MainScreenView::notifyPWMAutoMode()
+{
+	presenter->notifyAuto();
+	manualMode.setVisible(false);
+	manualMode.invalidate();
+	AutoMode.setVisible(true);
+	AutoMode.invalidate();
 }

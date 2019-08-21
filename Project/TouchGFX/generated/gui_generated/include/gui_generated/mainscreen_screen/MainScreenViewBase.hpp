@@ -9,7 +9,7 @@
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
@@ -33,7 +33,7 @@ protected:
      */
     touchgfx::ScalableImage background;
     touchgfx::CircleProgress PWMProgress;
-    touchgfx::PainterRGB888Bitmap PWMProgressPainter;
+    touchgfx::PainterRGB888 PWMProgressPainter;
     touchgfx::TextArea PeltierTempText;
     touchgfx::TextArea ExtTempText;
     touchgfx::TextAreaWithOneWildcard PeltierTemp;
@@ -43,6 +43,8 @@ protected:
     touchgfx::ClickListener< touchgfx::Image > StartButton;
     touchgfx::ClickListener< touchgfx::Image > StopButton;
     touchgfx::ClickListener< touchgfx::Image > PWMUpButton;
+    touchgfx::ClickListener< touchgfx::Image > AutoMode;
+    touchgfx::ClickListener< touchgfx::Image > manualMode;
 
     /*
      * Wildcard Buffers

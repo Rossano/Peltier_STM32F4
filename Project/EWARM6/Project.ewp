@@ -1114,9 +1114,6 @@
               <file>
                 <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_progressindicators_bg_medium_circle_indicator_bg_line_full.cpp</name>
               </file>
-              <file>
-                <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__designer\blue_progressindicators_fill_medium_circle_indicator_fill_line_full.cpp</name>
-              </file>
             </group>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Arrow_Dx.cpp</name>
@@ -1129,6 +1126,12 @@
             </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\black_background.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon_auto.cpp</name>
+            </file>
+            <file>
+              <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\icon_manual.cpp</name>
             </file>
             <file>
               <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\Start.cpp</name>

@@ -24,6 +24,7 @@ typedef enum
     T_SINGLEUSEID3,
     T_SINGLEUSEID4,
     T_SINGLEUSEID5,
+    T_DUMMY,
     NUMBER_OF_TEXT_KEYS
 } TEXTS;
 

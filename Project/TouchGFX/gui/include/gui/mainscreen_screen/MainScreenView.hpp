@@ -20,6 +20,7 @@ public:
 	virtual void PWMStartClicked(const Image &b, const ClickEvent &e);
 	virtual void PWMStopClicked(const Image &b, const ClickEvent &e);
 	virtual void PWMAutoClicked(const Image &b, const ClickEvent &e);
+	virtual void PWMManualClicked(const Image &b, const ClickEvent &e);
 
 	/**
 	 * UI interaction
@@ -28,6 +29,8 @@ public:
 	void notifyExternalTemperature(float temperature);
 	void notiryInternalTempSensor(float temperature);
 	void notifyPWMChange(uint16_t pwm);
+	void notifyPWMAutoMode();
+	void notifyPWMManualMode();
 
 	
 protected:
@@ -38,6 +41,9 @@ protected:
 	Callback<MainScreenView, const Image &, const ClickEvent &> PWMDownClickedCallback;
 	Callback<MainScreenView, const Image &, const ClickEvent &> PWMStartClickedCallback;
 	Callback<MainScreenView, const Image &, const ClickEvent &> PWMStopClickedCallback;
+	Callback<MainScreenView, const Image &, const ClickEvent &> AutoModeClickedCallback;
+	Callback<MainScreenView, const Image &, const ClickEvent &> ManualModelClickCallback;
+
 };
 
 #endif // MAINSCREEN_VIEW_HPP

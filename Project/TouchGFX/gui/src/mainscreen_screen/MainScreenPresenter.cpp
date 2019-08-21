@@ -28,36 +28,40 @@ void MainScreenPresenter::notifyPWMStop()
 
 void MainScreenPresenter::notifyPWMUp(uint16_t val)
 {
-	if ((model->getPWM() + val) <= 100)
+	if (model->isAutoMode()) return;
+	uint16_t pwm = model->getPWM();
+	if (val + pwm <= MAX_PWM)
 	{
-		model->setPWM(val + model->getPWM());
+		model->setPWM(val + pwm);
 	}
 	else
 	{
-		model->setPWM(100);
+		model->setPWM(MAX_PWM);
 	}
 }
 
 void MainScreenPresenter::notifyPWMDown(uint16_t val)
 {
-	if ((model->getPWM() - val) > 0)
+	if (model->isAutoMode()) return;
+	uint16_t pwm = model->getPWM();
+	if (pwm - val >= MIN_PWM)
 	{
-		model->setPWM(model->getPWM() - val);
+		model->setPWM(pwm - val);
 	}
 	else
 	{
-		model->setPWM(0);
+		model->setPWM(MIN_PWM);
 	}
 }
 
-void MainScreenPresenter::notifyAuto(bool)
+void MainScreenPresenter::notifyAuto()
 {
-	model->setPWMAuto(true);
+	model->setPWMMode(true);
 }
 
-void MainScreenPresenter::notifyManual(bool)
+void MainScreenPresenter::notifyManual()
 {
-	model->setPWMAuto(false);
+	model->setPWMMode(false);
 }
 
 void MainScreenPresenter::notifyPWMChange(uint16_t val)

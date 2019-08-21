@@ -34,8 +34,8 @@ public:
 	void notifyPWMStop();
 	void notifyPWMUp(uint16_t);
 	void notifyPWMDown(uint16_t);
-	void notifyAuto(bool);
-	void notifyManual(bool);
+	void notifyAuto();
+	void notifyManual();
 	void notifyPWMChange(uint16_t);
 	void peltierTempChange();
 	void extTempChange();

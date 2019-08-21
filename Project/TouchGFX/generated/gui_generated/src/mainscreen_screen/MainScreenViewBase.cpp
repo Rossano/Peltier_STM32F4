@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/mainscreen_screen/MainScreenViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 MainScreenViewBase::MainScreenViewBase()
 {
@@ -14,32 +14,34 @@ MainScreenViewBase::MainScreenViewBase()
     background.setPosition(0, 0, 240, 320);
     background.setScalingAlgorithm(ScalableImage::NEAREST_NEIGHBOR);
 
-    PWMProgress.setXY(68, 200);
+    PWMProgress.setXY(100, 200);
     PWMProgress.setProgressIndicatorPosition(0, 0, 104, 104);
-    PWMProgress.setRange(0, 100);
+    PWMProgress.setRange(0, 32767);
     PWMProgress.setCenter(52, 52);
     PWMProgress.setRadius(42);
     PWMProgress.setLineWidth(16);
     PWMProgress.setStartEndAngle(0, 360);
     PWMProgress.setCapPrecision(180);
     PWMProgress.setBackground(Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_CIRCLE_INDICATOR_BG_LINE_FULL_ID));
-    PWMProgressPainter.setBitmap(Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_MEDIUM_CIRCLE_INDICATOR_FILL_LINE_FULL_ID));
+    PWMProgressPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     PWMProgress.setPainter(PWMProgressPainter);
-    PWMProgress.setValue(33);
+    PWMProgress.setValue(16384);
 
     PeltierTempText.setXY(205, 10);
+    PeltierTempText.setVisible(false);
     PeltierTempText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     PeltierTempText.setLinespacing(0);
     PeltierTempText.setRotation(TEXT_ROTATE_90);
     PeltierTempText.setTypedText(TypedText(T_TEMPPELTIER_TXT));
 
     ExtTempText.setXY(161, 10);
+    ExtTempText.setVisible(false);
     ExtTempText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     ExtTempText.setLinespacing(0);
     ExtTempText.setRotation(TEXT_ROTATE_90);
     ExtTempText.setTypedText(TypedText(T_TEMPEXT_TXT));
 
-    PeltierTemp.setXY(205, 70);
+    PeltierTemp.setXY(205, 10);
     PeltierTemp.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     PeltierTemp.setLinespacing(0);
     PeltierTemp.setRotation(TEXT_ROTATE_90);
@@ -48,7 +50,7 @@ MainScreenViewBase::MainScreenViewBase()
     PeltierTemp.resizeToCurrentText();
     PeltierTemp.setTypedText(TypedText(T_TEMPPELTIER));
 
-    ExtTemp.setXY(161, 70);
+    ExtTemp.setXY(161, 10);
     ExtTemp.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
     ExtTemp.setLinespacing(0);
     ExtTemp.setRotation(TEXT_ROTATE_90);
@@ -78,6 +80,13 @@ MainScreenViewBase::MainScreenViewBase()
     PWMUpButton.setXY(29, 109);
     PWMUpButton.setBitmap(Bitmap(BITMAP_ARROW_DX_ID));
 
+    AutoMode.setXY(24, 215);
+    AutoMode.setBitmap(Bitmap(BITMAP_ICON_AUTO_ID));
+
+    manualMode.setXY(24, 215);
+    manualMode.setVisible(false);
+    manualMode.setBitmap(Bitmap(BITMAP_ICON_MANUAL_ID));
+
     add(background);
     add(PWMProgress);
     add(PeltierTempText);
@@ -89,6 +98,8 @@ MainScreenViewBase::MainScreenViewBase()
     add(StartButton);
     add(StopButton);
     add(PWMUpButton);
+    add(AutoMode);
+    add(manualMode);
 }
 
 void MainScreenViewBase::setupScreen()

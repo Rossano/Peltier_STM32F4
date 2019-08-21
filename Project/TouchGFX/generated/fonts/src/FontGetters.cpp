@@ -14,7 +14,7 @@ touchgfx::InternalFlashFont& getFont_times_20_4bpp();
 
 touchgfx::InternalFlashFont& getFont_times_20_4bpp()
 {
-    static touchgfx::InternalFlashFont times_20_4bpp(glyphs_times_20_4bpp, 15, 20, 4, 4, 1, 0, unicodes_times_20_4bpp, kerning_times_20_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont times_20_4bpp(glyphs_times_20_4bpp, 29, 20, 4, 4, 1, 0, unicodes_times_20_4bpp, kerning_times_20_4bpp, 63, 0);
     return times_20_4bpp;
 }
 

@@ -3,7 +3,9 @@
 
 #include <touchgfx/Utils.hpp>
 
-#define PWM_STEP	5
+#define PWM_STEP	255
+#define MIN_PWM		0
+#define MAX_PWM		32767
 
 class ModelListener;
 
@@ -61,8 +63,11 @@ public:
 	void setInternalTempSensor(float);
 	void setPWM(uint16_t);
 	void setPWMState(bool);
-	void setPWMAuto(bool);
+	//void setPWMAuto(bool);
 	void setPWMStep(uint16_t);
+	void setPWMMode(bool mode);
+	bool isAutoMode();
+	//void setManualMode();
 
 protected:
     /**
@@ -86,5 +91,11 @@ typedef struct
 	uint16_t pwm;
 } msg_t;
 extern msg_t msg;
+
+typedef enum
+{
+	AUTO,
+	MANUAL
+} controlMode_t;
 
 #endif /* MODEL_HPP */
