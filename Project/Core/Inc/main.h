@@ -29,7 +29,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "stm32f4xx_hal.h"
+//#include "stm32f4xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -60,11 +60,13 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+#if 0
 static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_DMA_Init(void);
 static void MX_TIM8_Init(void);
 static void MX_TIM9_Init(void);
+#endif
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -259,7 +261,7 @@ static void MX_TIM9_Init(void);
 #define SHELL_MAX_LINE_LENGTH	16
 #define SHELL_MAX_ARGUMENTS		4
 #define SHELL_PROMPT			"STM32> "
-#define FW_VERSION				"0.4.0.0"
+#define FW_VERSION				"0.6.0.1"
 #define OS_VERSION				"9.0.0"
 #define CR						"\r\n"
 

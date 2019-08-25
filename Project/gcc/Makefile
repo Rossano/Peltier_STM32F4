@@ -300,6 +300,8 @@ board_cpp_files := \
 	TouchGFX/target/ResistiveTouchController.cpp \
 	TouchGFX/target/STM32F4DMA.cpp \
 	TouchGFX/target/STM32F4HAL.cpp \
+	Core/Src/gpio.cpp \
+	Core/Src/timer.cpp \
 	Core/Src/PeltierApplication.cpp \
 	Core/src/shell.cpp
 

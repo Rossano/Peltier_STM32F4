@@ -9,6 +9,7 @@
 #include "stm32f4xx_hal_adc.h"
 #include "stm32f4xx_hal_pcd.h"
 
+#include "timer.h"
 #include "usbd_desc.h"
 #include "usbd_core.h"
 #include "usbd_cdc.h"
@@ -34,9 +35,10 @@ ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
 TIM_HandleTypeDef htim6;
-TIM_HandleTypeDef htim8;
-TIM_HandleTypeDef htim9;
+//TIM_HandleTypeDef htim8;
+//TIM_HandleTypeDef htim9;
 TIM_HandleTypeDef htim10;
+SemaphoreHandle_t xSamplingTimerSemaphore = NULL;
 
 uint16_t pwm10_level;
 
@@ -52,10 +54,6 @@ float temperature;
 
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
-
-//	MX_GPIO_Init();
-//	MX_ADC1_Init();
-//	MX_TIM10_Init();
 
 	// Create Lowlevel queue
 	xLowLevelData = xQueueCreate(3, sizeof(msg));
@@ -109,377 +107,8 @@ PeltierApplication::~PeltierApplication() {
 	// TODO Auto-generated destructor stub
 }
 
-#if 0
-void PeltierApplication::MX_GPIO_Init()
-{
-//	 GPIO_InitTypeDef GPIO_InitStruct = {0};
-//
-//	  /* GPIO Ports Clock Enable */
-//	  __HAL_RCC_GPIOE_CLK_ENABLE();
-//	  __HAL_RCC_GPIOC_CLK_ENABLE();
-//	  __HAL_RCC_GPIOF_CLK_ENABLE();
-//	  __HAL_RCC_GPIOH_CLK_ENABLE();
-//	  __HAL_RCC_GPIOA_CLK_ENABLE();
-//	  __HAL_RCC_GPIOB_CLK_ENABLE();
-//	  __HAL_RCC_GPIOG_CLK_ENABLE();
-//	  __HAL_RCC_GPIOD_CLK_ENABLE();
-//
-//	  /*Configure GPIO pin Output Level */
-//	  HAL_GPIO_WritePin(GPIOE, Peltier_VDD_Pin|Ext_VDD_Pin, GPIO_PIN_RESET);
-//
-//	  /*Configure GPIO pin Output Level */
-//	  HAL_GPIO_WritePin(GPIOC, NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin, GPIO_PIN_RESET);
-//
-//	  /*Configure GPIO pin Output Level */
-//	  HAL_GPIO_WritePin(ACP_RST_GPIO_Port, ACP_RST_Pin, GPIO_PIN_RESET);
-//
-//	  /*Configure GPIO pin Output Level */
-//	  HAL_GPIO_WritePin(GPIOD, RDX_Pin|WRX_DCX_Pin, GPIO_PIN_RESET);
-//
-//	  /*Configure GPIO pin Output Level */
-//	  HAL_GPIO_WritePin(GPIOG, LD3_Pin|LD4_Pin, GPIO_PIN_RESET);
-//
-//	  /*Configure GPIO pins : Peltier_VDD_Pin Ext_VDD_Pin */
-//	  GPIO_InitStruct.Pin = Peltier_VDD_Pin|Ext_VDD_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-//	  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pins : NCS_MEMS_SPI_Pin CSX_Pin OTG_FS_PSO_Pin */
-//	  GPIO_InitStruct.Pin = NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-//	  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pins : B1_Pin MEMS_INT1_Pin MEMS_INT2_Pin TP_INT1_Pin */
-//	  GPIO_InitStruct.Pin = B1_Pin|MEMS_INT1_Pin|MEMS_INT2_Pin|TP_INT1_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pin : ACP_RST_Pin */
-//	  GPIO_InitStruct.Pin = ACP_RST_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-//	  HAL_GPIO_Init(ACP_RST_GPIO_Port, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pin : OTG_FS_OC_Pin */
-//	  GPIO_InitStruct.Pin = OTG_FS_OC_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  HAL_GPIO_Init(OTG_FS_OC_GPIO_Port, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pin : BOOT1_Pin */
-//	  GPIO_InitStruct.Pin = BOOT1_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pin : TE_Pin */
-//	  GPIO_InitStruct.Pin = TE_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  HAL_GPIO_Init(TE_GPIO_Port, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pins : RDX_Pin WRX_DCX_Pin */
-//	  GPIO_InitStruct.Pin = RDX_Pin|WRX_DCX_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-//	  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-//
-//	  /*Configure GPIO pins : LD3_Pin LD4_Pin */
-//	  GPIO_InitStruct.Pin = LD3_Pin|LD4_Pin;
-//	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-//	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-//	  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
-	  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-	  /* GPIO Ports Clock Enable */
-	  __HAL_RCC_GPIOC_CLK_ENABLE();
-	  __HAL_RCC_GPIOF_CLK_ENABLE();
-	  __HAL_RCC_GPIOH_CLK_ENABLE();
-	  __HAL_RCC_GPIOA_CLK_ENABLE();
-	  __HAL_RCC_GPIOB_CLK_ENABLE();
-	  __HAL_RCC_GPIOG_CLK_ENABLE();
-	  __HAL_RCC_GPIOE_CLK_ENABLE();
-	  __HAL_RCC_GPIOD_CLK_ENABLE();
-
-	  /*Configure GPIO pin Output Level */
-	  HAL_GPIO_WritePin(GPIOC, NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin, GPIO_PIN_RESET);
-
-	  /*Configure GPIO pin Output Level */
-	  HAL_GPIO_WritePin(ACP_RST_GPIO_Port, ACP_RST_Pin, GPIO_PIN_RESET);
-
-	  /*Configure GPIO pin Output Level */
-	  HAL_GPIO_WritePin(GPIOD, RDX_Pin|WRX_DCX_Pin, GPIO_PIN_RESET);
-
-	  /*Configure GPIO pin Output Level */
-	  HAL_GPIO_WritePin(GPIOG, LD3_Pin|LD4_Pin, GPIO_PIN_RESET);
-
-	  /*Configure GPIO pins : PCPin PCPin PCPin */
-	  GPIO_InitStruct.Pin = NCS_MEMS_SPI_Pin|CSX_Pin|OTG_FS_PSO_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-	  /*Configure GPIO pins : PAPin PAPin PAPin PAPin */
-	  GPIO_InitStruct.Pin = B1_Pin|MEMS_INT1_Pin|MEMS_INT2_Pin|TP_INT1_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-	  /*Configure GPIO pin : PtPin */
-	  GPIO_InitStruct.Pin = ACP_RST_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	  HAL_GPIO_Init(ACP_RST_GPIO_Port, &GPIO_InitStruct);
-
-	  /*Configure GPIO pin : PtPin */
-	  GPIO_InitStruct.Pin = OTG_FS_OC_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  HAL_GPIO_Init(OTG_FS_OC_GPIO_Port, &GPIO_InitStruct);
-
-	  /*Configure GPIO pin : PtPin */
-	  GPIO_InitStruct.Pin = BOOT1_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
-
-	  /*Configure GPIO pin : PtPin */
-	  GPIO_InitStruct.Pin = TE_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  HAL_GPIO_Init(TE_GPIO_Port, &GPIO_InitStruct);
-
-	  /*Configure GPIO pins : PDPin PDPin */
-	  GPIO_InitStruct.Pin = RDX_Pin|WRX_DCX_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-
-	  /*Configure GPIO pins : PGPin PGPin */
-	  GPIO_InitStruct.Pin = LD3_Pin|LD4_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
-
-}
-
-void PeltierApplication::MX_ADC1_Init(void)
-{
-
-  /* USER CODE BEGIN ADC1_Init 0 */
-
-  /* USER CODE END ADC1_Init 0 */
-
-  ADC_ChannelConfTypeDef sConfig = {0};
-
-  /* USER CODE BEGIN ADC1_Init 1 */
-
-  /* USER CODE END ADC1_Init 1 */
-  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
-  */
-  hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
-  hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DMAContinuousRequests = ENABLE;
-  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  if (HAL_ADC_Init(&hadc1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /* USER CODE BEGIN ADC1_Init 2 */
-
-  /* USER CODE END ADC1_Init 2 */
-
-}
-
-/**
-  * @brief TIM10 Initialization Function
-  * @param None
-  * @retval None
-  */
-void PeltierApplication::MX_TIM10_Init(void)
-{
-
-  /* USER CODE BEGIN TIM10_Init 0 */
-
-  /* USER CODE END TIM10_Init 0 */
-
-  TIM_OC_InitTypeDef sConfigOC = {0};
-
-  /* USER CODE BEGIN TIM10_Init 1 */
-
-  /* USER CODE END TIM10_Init 1 */
-  htim10.Instance = TIM10;
-  htim10.Init.Prescaler = 16;
-  htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim10.Init.Period = 10499;
-  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-//  htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
-  __HAL_TIM_SET_AUTORELOAD(&htim10, 10499);
-
-  if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_Init(&htim10) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1000;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim10, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM10_Init 2 */
-
-  /* USER CODE END TIM10_Init 2 */
-  //HAL_TIM_MspPostInit(&htim10);
-
-}
-#endif
-
-#if 0
-void PeltierApplication::MX_USB_DEVICE_Init()
-{
-	  /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
-
-	  /* USER CODE END USB_DEVICE_Init_PreTreatment */
-
-	  /* Init Device Library, add supported class and start the library. */
-	  USBD_Init(&hUsbDeviceHS, &HS_Desc, DEVICE_HS);
-
-	  USBD_RegisterClass(&hUsbDeviceHS, &USBD_CDC);
-
-	  USBD_CDC_RegisterInterface(&hUsbDeviceHS, &USBD_Interface_fops_HS);
-
-	  USBD_Start(&hUsbDeviceHS);
-
-	  /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
-
-	  /* USER CODE END USB_DEVICE_Init_PostTreatment */
-}
-#endif
-
-#if 0
-/* USER CODE BEGIN Header_StartDefaultTask */
-/**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartDefaultTask */
-void PeltierApplication::StartDefaultTask(void const * argument)
-{
-  /* init code for USB_HOST */
-//  MX_USB_HOST_Init();
-
-  /* USER CODE BEGIN 5 */
-	  /* init code for USB_DEVICE */
-	  MX_USB_DEVICE_Init();
-  /* Infinite loop */
-	  uint8_t myBuf[20] = "Ciao Belo\r\n";
-	  float temperature;
-  for(;;)
-  {
-    //osDelay(1);
-//	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
-//	  HAL_Delay(500);
-	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
-	  temperature  = ((float) adcBuffer[3] / ADC_FULL_SCALE * 3300);
-//	  model->setPeltierTemperature((temperature - 760) / 2.5 + 25);
-	  msg.peltier = temperature;
-	  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
-	  msg.ext = temperature;
-	  msg.pwm = 128;
-	  BaseType_t status;
-	  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
-	  {
-
-	  }
-	  osDelay(500);
-  }
-  /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_StartShellTask */
-/**
-* @brief Function implementing the shellTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartShellTask */
-void PeltierApplication::StartShellTask(void const * argument)
-{
-  /* USER CODE BEGIN StartShellTask */
-//  char line[SHELL_MAX_LINE_LENGTH];
-  // chRegSetThreadName("shell");
-
-  iprintf("%s STM32 Shell;%S",CR,CR);
-  /* Infinite loop */
-  for(;;)
-  {
-	  // Display the prompt
-	  iprintf(SHELL_PROMPT);
-#ifdef USE_USBCDC
-	  if(bEOL)
-	  {
-		  //shell->ShellTask((void *)argument, line);
-		  bEOL = false;
-	  }
-#else
-	  // Get the command line from stdin
-	  gets(line);
-	  // Calls the shell task
-	  shell->ShellTask((void *)argument, line);
-#endif
-    osDelay(1);
-  }
-  /* USER CODE END StartShellTask */
-}
-
-/* USER CODE BEGIN Header_StartCoreTask */
-/**
-* @brief Function implementing the coreTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartCoreTask */
-void PeltierApplication::StartCoreTask(void const * argument)
-{
-  /* USER CODE BEGIN StartCoreTask */
-  /* Infinite loop */
-  for(;;)
-  {
-	iprintf("Tick%s", CR);
-    osDelay(1000);
-  }
-  /* USER CODE END StartCoreTask */
-}
-#endif
 
 void Error_Handler(void)
 {
@@ -1050,12 +679,20 @@ static void xStartDefaultTask(void * argument)
   /* Infinite loop */
 	  uint8_t myBuf[20] = "Ciao Belo\r\n";
 	  float temperature;
+	  xSamplingTimerSemaphore = xSemaphoreCreateBinary();
+	  HAL_TIM_Base_Start_IT(&htim4);		// 8
+
   for(;;)
   {
     //osDelay(1);
 //	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
 //	  HAL_Delay(500);
 	  /** HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);*/
+	  if(xSemaphoreTake(xSamplingTimerSemaphore, 0xffff))
+	  {
+
+	  }
+
 	  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)buffer, ADC_CHANNELS);
 	  temperature  = ((float) adcBuffer[0] / ADC_FULL_SCALE * 3300);
 //	  model->setPeltierTemperature((temperature - 760) / 2.5 + 25);
@@ -1064,11 +701,12 @@ static void xStartDefaultTask(void * argument)
 	  msg.ext = temperature;
 	  msg.pwm = 128;
 	  BaseType_t status;
-	  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
+	  	  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
 	  {
 
 	  }
-	  osDelay(500);
+	  //osDelay(1500);
+	 // HAL_Delay(1500);
 
   }
   /* USER CODE END 5 */
@@ -1076,10 +714,5 @@ static void xStartDefaultTask(void * argument)
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-/*	for (int i =0; i<3; i++)
-	{
-	   adcBuffer[i] = buffer[i];  // store the values in adc[]
-	}
-*/
     temperature = (((adcBuffer[0]*VSENSE)-.76)/.0025)+25;
 }

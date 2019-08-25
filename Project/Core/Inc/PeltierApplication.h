@@ -132,6 +132,7 @@ extern PeltierApplication *appli;
 
 //	Module global variables
 extern uint16_t pwm10_level;
+extern SemaphoreHandle_t xSamplingTimerSemaphore;
 
 //	Exported funcion prototypes
 int myatoi(const char *string);

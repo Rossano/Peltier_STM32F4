@@ -156,7 +156,7 @@ void HAL_ResumeTick(void)
   * @param  htim  TIM handle
   * @retval None
   */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//__weak void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)0
 {
   HAL_IncTick();
 }
