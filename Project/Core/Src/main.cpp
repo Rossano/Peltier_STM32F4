@@ -49,6 +49,8 @@ using namespace touchgfx;
 #include "gpio.h"
 #include "usbd_cdc_if.h"
 #include "timer.h"
+#include "adc.h"
+#include "dma.h"
 #include "PeltierApplication.h"
 #include "shell.hpp"
 
@@ -77,7 +79,7 @@ using namespace touchgfx;
 #define TIM_AUTORELOAD_PRELOAD_ENABLE                 TIM_CR1_ARPE              /*!< TIMx_ARR register is buffered */
 #endif
 
-#define VSENSE									( 3.3f / 1023 )
+//#define VSENSE									( 3.3f / 1023 )
 //#define USE_USB
 
 /*uint8_t usb_cdc_rx_char;
@@ -86,10 +88,12 @@ uint8_t newCmd;
 uint8_t new_char_on_usb; */
 QueueHandle_t xUsb_tx, xUsb_rx;
 
+#if 0
 uint16_t adcBuffer[ADC_CHANNELS];
 
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;
+#endif
 
 //extern void MX_TIM8_Init();
 
@@ -106,7 +110,7 @@ static void GUITask(void* params)
     touchgfx::HAL::getInstance()->taskEntry();
 }
 
-
+#if 0
 static void ShellTask(void *p)
 {
 	appli->shell->vShellThread((void *)ShellCommand);
@@ -219,6 +223,7 @@ static void xStartDefaultTask(void * argument)
   }
   /* USER CODE END 5 */
 }
+#endif
 
 int _write(int file, char *ptr, int len)
 {
@@ -439,6 +444,7 @@ int _write(int file, char *ptr, int len)
 //}
 #endif
 
+#if 0
 /**
   * Enable DMA controller clock
   */
@@ -453,7 +459,8 @@ static void MX_DMA_Init(void)
   HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
 
 }
-
+#endif
+#if 0
 /**
  * 	Enable ADC1
  */
@@ -573,6 +580,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
   /* USER CODE END ADC1_MspInit 1 */
   }
 }
+#endif
 
 PeltierApplication *appli = new PeltierApplication();
 int main(void)

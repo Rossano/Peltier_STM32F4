@@ -302,6 +302,8 @@ board_cpp_files := \
 	TouchGFX/target/STM32F4HAL.cpp \
 	Core/Src/gpio.cpp \
 	Core/Src/timer.cpp \
+	Core/Src/adc.cpp \
+	Core/Src/dma.cpp \
 	Core/Src/PeltierApplication.cpp \
 	Core/src/shell.cpp
 

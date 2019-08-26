@@ -10,6 +10,7 @@
 #include "stm32f4xx_hal_pcd.h"
 
 #include "timer.h"
+#include "adc.h"
 #include "usbd_desc.h"
 #include "usbd_core.h"
 #include "usbd_cdc.h"
@@ -31,8 +32,10 @@
 #define VSENSE									( 3.3f / 4095 )
 
 /* Private variables ---------------------------------------------------------*/
+#if 0
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
+#endif
 
 TIM_HandleTypeDef htim6;
 //TIM_HandleTypeDef htim8;
@@ -48,9 +51,11 @@ bool bEOL = false;
 uint8_t lenghtBuf = 0;
 QueueHandle_t xLowLevelData;
 
+#if 0
 extern uint16_t adcBuffer[ADC_CHANNELS];
 uint16_t buffer[ADC_CHANNELS];
-float temperature;
+#endif
+//float temperature;
 
 PeltierApplication::PeltierApplication() {
 	// TODO Auto-generated constructor stub
@@ -668,6 +673,7 @@ void USB_ReceivedChar(uint8_t ch)
 	}
 }
 
+#if 0
 static void xStartDefaultTask(void * argument)
 {
   /* init code for USB_HOST */
@@ -711,8 +717,132 @@ static void xStartDefaultTask(void * argument)
   }
   /* USER CODE END 5 */
 }
+#endif
 
+#if 0
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     temperature = (((adcBuffer[0]*VSENSE)-.76)/.0025)+25;
+}
+#endif
+
+void ShellTask(void *p)
+{
+	appli->shell->vShellThread((void *)ShellCommand);
+/*	cdc_buf_t line;
+	for(uint8_t i=0; i<sizeof(cdc_buf_t); i++) line[i] = 0;
+	while (true)
+	{
+		BaseType_t xStatus;
+		xStatus = xQueueReceive(xUsb_rx, &line, 100);
+		if(xStatus != pdPASS)
+		{
+			// ERROR
+		}
+		// Check if there was a message awaiting or it was just a timeout
+		if(line[0] != 0)
+		{
+			// Calls the shell task
+			appli->shell->ShellTask(p, (char *)line);
+		}
+	}*/
+}
+
+void xStartDefaultTask(void * argument)
+{
+  /* init code for USB_HOST */
+//  MX_USB_HOST_Init();
+
+  uint8_t pos = 0;
+  const TickType_t ticks = pdMS_TO_TICKS(50);
+
+  cdc_buf_t buffer;
+  cdc_buf_t data_to_send;
+/*  xQueueCreate(3, sizeof(cdc_buf_t));
+  xQueueCreate(3, sizeof(cdc_buf_t)); */
+
+  /* USER CODE BEGIN 5 */
+	  /* init code for USB_DEVICE */
+  /* Infinite loop */
+//	  uint8_t myBuf[20] = "Ciao Belo\r\n";
+
+  xSamplingTimerSemaphore = xCreateBinary();
+  HAL_TIM_Base_Start_IT(&htim4);
+
+  ///
+  ///	Print the PROMPT
+  ///
+  CDC_Transmit_HS((uint8_t*)"\r\nSTM32> ", 9);
+  float temperature;
+  for(;;)
+  {
+    //osDelay(1);
+#ifdef USE_USB
+	  ///
+	  /// Task only manage to send the outcoming messages, incoming messages are managed by callback
+	  ///
+
+//	  CDC_Transmit_HS(myBuf, sizeof(myBuf));
+	  ///
+	  /// Handle a new char from USB
+	  ///
+/*	  if(new_char_on_usb)
+	  {
+		  for(uint8_t i=0; i < usb_cdc_rx_char; i++)
+		  {
+			  if(usb_cdc_buffer[i] == '\r' || usb_cdc_buffer[i] == '\n' || usb_cdc_buffer[i] == '\0' || pos < MAX_BUF_LENGTH)
+			  {
+				  buffer[pos++] = '0';
+				  xQueueSendToBack(xUsb_tx, &buffer, 0);
+				  newCmd = true;
+				  CDC_Transmit_HS(buffer, pos);
+				  break;
+			  }
+			  else {
+				  buffer[pos++] = usb_cdc_buffer[i];
+			  }
+		  }
+		  new_char_on_usb = false;
+		  // Clean up the buffer
+		  if(newCmd)
+		  {
+			  for(uint8_t i=0; i < MAX_BUF_LENGTH; i++) buffer[i] = 0;
+			  newCmd = false;
+		  }
+	  }*/
+	  ///
+	  /// Check if a new message has to be sent to USB and do it
+	  ///
+	  BaseType_t xStatus;
+	  if((xStatus = xQueueReceive(xUsb_rx, &data_to_send,ticks)) == pdPASS)
+	  {
+		  uint8_t len = 0;
+		  while (data_to_send[len] && len < MAX_BUF_LENGTH) len++;
+		  CDC_Transmit_HS(data_to_send, len);
+		  ///
+		  ///	Print the PROMPT
+		  ///
+		  CDC_Transmit_HS((uint8_t*)"\r\nSTM32> ", 9);
+	  }
+#endif
+//	  HAL_Delay(500);
+	  	  if(xSemaphoreTake(xSamplingTimerSemaphore, 0xffff))
+	  	  {
+
+	  	  }
+		  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+		  temperature  = ((float) adcBuffer[0] / ADC_FULL_SCALE * 3300);
+		  msg.peltier = temperature;
+		  temperature  = ((float) adcBuffer[2] / ADC_FULL_SCALE * 3300);
+		  msg.ext = temperature;
+		  msg.pwm = 128;
+		  BaseType_t status;
+		  if((status = xQueueSend(xLowLevelData, &msg, 0)) == pdTRUE)
+		  {
+
+		  }
+		  //osDelay(500);
+		  HAL_Delay(1500);
+  }
+  /* USER CODE END 5 */
 }

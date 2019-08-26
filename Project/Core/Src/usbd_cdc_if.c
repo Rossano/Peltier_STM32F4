@@ -24,6 +24,7 @@
 
 /* USER CODE BEGIN INCLUDE */
 
+#include "adc.h"
 #include "main.h"
 
 /* USER CODE END INCLUDE */

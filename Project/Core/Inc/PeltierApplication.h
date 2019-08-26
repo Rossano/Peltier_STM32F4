@@ -143,6 +143,9 @@ void vPwmSet(int argc, char *argv[]);
 void ADCInit(int argc, char *argv[]);
 void getADC_Result(int argc, char *argv[]);
 
+void ShellTask(void *p);
+void xStartDefaultTask(void * argument);
+
 void USB_ReceivedChar(uint8_t ch);
 
 //void xStartDefaultTask(void * argument);

@@ -45,8 +45,10 @@ extern "C" {
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
 
+#if 0
 #define ADC_FULL_SCALE		4095
 #define ADC_CHANNELS		3
+#endif
 
 /* USER CODE END EC */
 
@@ -273,7 +275,7 @@ extern uint8_t newCmd;
 extern uint8_t new_char_on_usb;
 extern QueueHandle_t xUsb_tx, xUsb_rx;
 
-extern uint16_t adcBuffer[ADC_CHANNELS];
+//extern uint16_t adcBuffer[ADC_CHANNELS];
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

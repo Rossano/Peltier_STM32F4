@@ -11,6 +11,8 @@
 
 //	My included file and headers
 //#include <stddef.h>
+#include "adc.h"
+#include "timer.h"
 #include "main.h"
 
 //	Shell own inclusion header
