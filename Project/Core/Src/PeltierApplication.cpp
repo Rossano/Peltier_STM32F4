@@ -19,6 +19,7 @@
 
 #include "FreeRTOS.h"
 #include "queue.h"
+#include "semphr.h"
 
 #include "main.h"
 #include "PeltierApplication.h"
@@ -766,7 +767,7 @@ void xStartDefaultTask(void * argument)
   /* Infinite loop */
 //	  uint8_t myBuf[20] = "Ciao Belo\r\n";
 
-  xSamplingTimerSemaphore = xCreateBinary();
+  xSamplingTimerSemaphore = xSemaphoreCreateBinary();
   HAL_TIM_Base_Start_IT(&htim4);
 
   ///

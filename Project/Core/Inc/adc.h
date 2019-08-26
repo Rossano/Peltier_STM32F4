@@ -17,7 +17,7 @@
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;
 extern uint16_t adcBuffer[ADC_CHANNELS];
-float temperature;
+extern float temperature;
 
 void MX_ADC1_Init(void);
 void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle);

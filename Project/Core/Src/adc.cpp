@@ -14,6 +14,7 @@
 ADC_HandleTypeDef hadc1;
 //DMA_HandleTypeDef hdma_adc1;
 uint16_t adcBuffer[ADC_CHANNELS];
+float temperature;
 
 /**
  * 	Enable ADC1
