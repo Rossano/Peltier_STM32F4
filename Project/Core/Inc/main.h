@@ -263,7 +263,7 @@ static void MX_TIM9_Init(void);
 #define SHELL_MAX_LINE_LENGTH	16
 #define SHELL_MAX_ARGUMENTS		4
 #define SHELL_PROMPT			"STM32> "
-#define FW_VERSION				"0.6.0.1"
+#define FW_VERSION				"0.6.1.4"
 #define OS_VERSION				"9.0.0"
 #define CR						"\r\n"
 

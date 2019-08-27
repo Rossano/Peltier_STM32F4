@@ -246,8 +246,10 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
  */
 void TIM4_IRQHandle()	// 8
 {
-	BaseType_t xHigherPriorityTaskWoken;
+	/*BaseType_t xHigherPriorityTaskWoken;
 	xHigherPriorityTaskWoken = pdFALSE;
 	xSemaphoreGiveFromISR(xSamplingTimerSemaphore, &xHigherPriorityTaskWoken);
+	*/
+	HAL_TIM_IRQHandler(&htim4);
 }
 

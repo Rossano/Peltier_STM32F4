@@ -44,6 +44,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
+#include "timer.h"
+#include "FreeRTOS.h"
+#include "semphr.h"
+//#include "PeltierApplication.h"
+#include "main.h"
+
+
 /** @addtogroup STM32F4xx_HAL_Driver
   * @{
   */
@@ -51,6 +58,7 @@
 /** @addtogroup HAL_TimeBase_TIM
   * @{
   */ 
+extern SemaphoreHandle_t xSamplingTimerSemaphore;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -160,7 +168,18 @@ void HAL_ResumeTick(void)
   */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  HAL_IncTick();
+	if(htim->Instance == TIM6)
+	{
+		HAL_IncTick();
+		return;
+	}
+	if(htim->Instance == TIM4)
+	{
+		BaseType_t xHigherPriorityTaskWoken;
+		xHigherPriorityTaskWoken = pdFALSE;
+		xSemaphoreGiveFromISR(xSamplingTimerSemaphore, &xHigherPriorityTaskWoken);
+		HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+	}
 }
 
 /**
