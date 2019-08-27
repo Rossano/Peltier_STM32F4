@@ -5271,549 +5271,551 @@ LOAD c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-e
                 0x08006d04       0x14 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
  .text._Z41__static_initialization_and_destruction_0ii
                 0x08006d18       0x28 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
- .text.main     0x08006d40       0xbc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+ .text.main     0x08006d40       0xb0 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
                 0x08006d40                main
  .text._GLOBAL__sub_I_xUsb_tx
-                0x08006dfc        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+                0x08006df0        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
  .text._ZN8touchgfx8LCD24bppD2Ev
-                0x08006e0a        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e0a                touchgfx::LCD24bpp::~LCD24bpp()
-                0x08006e0a                touchgfx::LCD24bpp::~LCD24bpp()
+                0x08006dfe        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006dfe                touchgfx::LCD24bpp::~LCD24bpp()
+                0x08006dfe                touchgfx::LCD24bpp::~LCD24bpp()
  .text._ZN10STM32F4HALD2Ev
-                0x08006e0c        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e0c                STM32F4HAL::~STM32F4HAL()
-                0x08006e0c                STM32F4HAL::~STM32F4HAL()
+                0x08006e00        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e00                STM32F4HAL::~STM32F4HAL()
+                0x08006e00                STM32F4HAL::~STM32F4HAL()
  .text._ZN8touchgfx25CortexMMCUInstrumentationD2Ev
-                0x08006e0e        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e0e                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
-                0x08006e0e                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
+                0x08006e02        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e02                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
+                0x08006e02                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
  .text._ZN8touchgfx24ResistiveTouchControllerD2Ev
-                0x08006e10        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e10                touchgfx::ResistiveTouchController::~ResistiveTouchController()
-                0x08006e10                touchgfx::ResistiveTouchController::~ResistiveTouchController()
+                0x08006e04        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e04                touchgfx::ResistiveTouchController::~ResistiveTouchController()
+                0x08006e04                touchgfx::ResistiveTouchController::~ResistiveTouchController()
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EE8capacityEv
-                0x08006e12        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e12                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
+                0x08006e06        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e06                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EE12element_sizeEv
-                0x08006e16        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e16                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
+                0x08006e0a        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e0a                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EE7elementEt
-                0x08006e1a        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e1a                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
+                0x08006e0e        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e0e                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EE7elementEt
-                0x08006e26        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e26                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
+                0x08006e1a        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e1a                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EE8capacityEv
-                0x08006e32        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e32                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
+                0x08006e26        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e26                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EE12element_sizeEv
-                0x08006e36        0x6 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e36                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
+                0x08006e2a        0x6 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e2a                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EE7elementEt
-                0x08006e3c        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e3c                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
+                0x08006e30        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e30                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EE7elementEt
-                0x08006e4a        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e4a                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
+                0x08006e3e        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e3e                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EE8capacityEv
-                0x08006e58        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e58                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
+                0x08006e4c        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e4c                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::capacity() const
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EE12element_sizeEv
-                0x08006e5c        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e5c                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
+                0x08006e50        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e50                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element_size()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EE7elementEt
-                0x08006e60        0x8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e60                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
+                0x08006e54        0x8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e54                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short)
  .text._ZNK8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EE7elementEt
-                0x08006e68        0x8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e68                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
+                0x08006e5c        0x8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e5c                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::element(unsigned short) const
  .text._ZN16FrontendHeapBase15gotoStartScreenER19FrontendApplication
-                0x08006e70        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e70                FrontendHeapBase::gotoStartScreen(FrontendApplication&)
- *fill*         0x08006e7a        0x2 
+                0x08006e64        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e64                FrontendHeapBase::gotoStartScreen(FrontendApplication&)
+ *fill*         0x08006e6e        0x2 
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EED2Ev
-                0x08006e7c       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e7c                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
-                0x08006e7c                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006e70       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e70                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006e70                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListINS_15CoverTransitionILNS_9DirectionE2EEENS2_INS1_3NilES6_EEEELt1EED0Ev
-                0x08006e90       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006e90                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006e84       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006e84                touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::CoverTransition<(touchgfx::Direction)2>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EED2Ev
-                0x08006eac       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006eac                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
-                0x08006eac                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006ea0       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006ea0                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006ea0                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI14MainScreenViewNS2_INS1_3NilES4_EEEELt1EED0Ev
-                0x08006ec0       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006ec0                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006eb4       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006eb4                touchgfx::Partition<touchgfx::meta::TypeList<MainScreenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EED2Ev
-                0x08006ee0       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006ee0                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
-                0x08006ee0                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006ed4       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006ed4                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006ed4                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN8touchgfx9PartitionINS_4meta8TypeListI21SplashScreenPresenterNS2_INS1_3NilES4_EEEELt1EED0Ev
-                0x08006ef4       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006ef4                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
+                0x08006ee8       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006ee8                touchgfx::Partition<touchgfx::meta::TypeList<SplashScreenPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, (unsigned short)1>::~Partition()
  .text._ZN12FrontendHeapD2Ev
-                0x08006f10       0x44 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08006f10                FrontendHeap::~FrontendHeap()
-                0x08006f10                FrontendHeap::~FrontendHeap()
+                0x08006f04       0x44 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006f04                FrontendHeap::~FrontendHeap()
+                0x08006f04                FrontendHeap::~FrontendHeap()
  .text._ZN8touchgfxL18SystemClock_ConfigEv
-                0x08006f54       0x80 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006f48       0x80 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text.LCD_MspInit
-                0x08006fd4      0x14c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08006fc8      0x14c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text.LCD_Init
-                0x08007120       0x90 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007114       0x90 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text._Z41__static_initialization_and_destruction_0ii
-                0x080071b0       0x8c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x080071a4       0x8c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text._ZN12FrontendHeapD0Ev
-                0x0800723c       0x4c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x0800723c                FrontendHeap::~FrontendHeap()
+                0x08007230       0x4c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007230                FrontendHeap::~FrontendHeap()
  .text._ZN8touchgfx8LCD24bppD0Ev
-                0x08007288        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08007288                touchgfx::LCD24bpp::~LCD24bpp()
- *fill*         0x08007296        0x2 
+                0x0800727c        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x0800727c                touchgfx::LCD24bpp::~LCD24bpp()
+ *fill*         0x0800728a        0x2 
  .text.LCD_GetXSize
-                0x08007298       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08007298                LCD_GetXSize
+                0x0800728c       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x0800728c                LCD_GetXSize
  .text.LCD_GetYSize
-                0x080072a8       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x080072a8                LCD_GetYSize
+                0x0800729c       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x0800729c                LCD_GetYSize
  .text._ZL20LCD_LayerDefaultInittm
-                0x080072b8       0x64 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x080072ac       0x64 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text._ZL10LCD_Configv
-                0x0800731c       0x12 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007310       0x12 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text._ZN8touchgfx7hw_initEv
-                0x0800732e       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x0800732e                touchgfx::hw_init()
+                0x08007322       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007322                touchgfx::hw_init()
  .text._ZN10STM32F4HALD0Ev
-                0x08007342        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08007342                STM32F4HAL::~STM32F4HAL()
+                0x08007336        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007336                STM32F4HAL::~STM32F4HAL()
  .text._ZN8touchgfx6getHALI10STM32F4HALEERNS_3HALERNS_13DMA_InterfaceERNS_3LCDERNS_15TouchControllerEss
-                0x08007350       0xfc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08007350                touchgfx::HAL& touchgfx::getHAL<STM32F4HAL>(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, short, short)
+                0x08007344       0xfc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007344                touchgfx::HAL& touchgfx::getHAL<STM32F4HAL>(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, short, short)
  .text._ZN8touchgfx21touchgfx_generic_initI10STM32F4HALEERNS_3HALERNS_13DMA_InterfaceERNS_3LCDERNS_15TouchControllerEssPtmm
-                0x0800744c      0x108 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x0800744c                touchgfx::HAL& touchgfx::touchgfx_generic_init<STM32F4HAL>(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, short, short, unsigned short*, unsigned long, unsigned long)
+                0x08007440      0x108 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007440                touchgfx::HAL& touchgfx::touchgfx_generic_init<STM32F4HAL>(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, short, short, unsigned short*, unsigned long, unsigned long)
  .text._ZN8touchgfx13touchgfx_initEv
-                0x08007554       0x70 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x08007554                touchgfx::touchgfx_init()
+                0x08007548       0x70 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08007548                touchgfx::touchgfx_init()
  .text._ZN8touchgfx25CortexMMCUInstrumentationD0Ev
-                0x080075c4        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x080075c4                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
+                0x080075b8        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x080075b8                touchgfx::CortexMMCUInstrumentation::~CortexMMCUInstrumentation()
  .text._ZN8touchgfx24ResistiveTouchControllerD0Ev
-                0x080075d2        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x080075d2                touchgfx::ResistiveTouchController::~ResistiveTouchController()
+                0x080075c6        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x080075c6                touchgfx::ResistiveTouchController::~ResistiveTouchController()
  .text._GLOBAL__sub_I_os_inited
-                0x080075e0        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x080075d4        0xe TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
  .text._ZN8touchgfx18MCUInstrumentation13getCCConsumedEv
-                0x080075ee        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x080075ee                touchgfx::MCUInstrumentation::getCCConsumed()
+                0x080075e2        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x080075e2                touchgfx::MCUInstrumentation::getCCConsumed()
  .text._ZN8touchgfx18MCUInstrumentation13setCCConsumedEm
-                0x080075f2        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x080075f2                touchgfx::MCUInstrumentation::setCCConsumed(unsigned long)
- *fill*         0x080075f6        0x2 
+                0x080075e6        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x080075e6                touchgfx::MCUInstrumentation::setCCConsumed(unsigned long)
+ *fill*         0x080075ea        0x2 
  .text._ZN8touchgfx25CortexMMCUInstrumentation4initEv
-                0x080075f8       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x080075f8                touchgfx::CortexMMCUInstrumentation::init()
+                0x080075ec       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x080075ec                touchgfx::CortexMMCUInstrumentation::init()
  .text._ZN8touchgfx25CortexMMCUInstrumentation12getElapsedUSEjjj
-                0x08007618        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x08007618                touchgfx::CortexMMCUInstrumentation::getElapsedUS(unsigned int, unsigned int, unsigned int)
+                0x0800760c        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x0800760c                touchgfx::CortexMMCUInstrumentation::getElapsedUS(unsigned int, unsigned int, unsigned int)
  .text._ZN8touchgfx25CortexMMCUInstrumentation12getCPUCyclesEv
-                0x08007624        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x08007624                touchgfx::CortexMMCUInstrumentation::getCPUCycles()
+                0x08007618        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x08007618                touchgfx::CortexMMCUInstrumentation::getCPUCycles()
  .text._ZN8touchgfx25CortexMMCUInstrumentation12setMCUActiveEb
-                0x08007630       0x22 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
-                0x08007630                touchgfx::CortexMMCUInstrumentation::setMCUActive(bool)
- *fill*         0x08007652        0x2 
+                0x08007624       0x22 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+                0x08007624                touchgfx::CortexMMCUInstrumentation::setMCUActive(bool)
+ *fill*         0x08007646        0x2 
  .text._ZN8touchgfx4GPIO3setENS0_7GPIO_IDE
-                0x08007654       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
-                0x08007654                touchgfx::GPIO::set(touchgfx::GPIO::GPIO_ID)
+                0x08007648       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+                0x08007648                touchgfx::GPIO::set(touchgfx::GPIO::GPIO_ID)
  .text._ZN8touchgfx4GPIO5clearENS0_7GPIO_IDE
-                0x08007674       0x24 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
-                0x08007674                touchgfx::GPIO::clear(touchgfx::GPIO::GPIO_ID)
+                0x08007668       0x24 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+                0x08007668                touchgfx::GPIO::clear(touchgfx::GPIO::GPIO_ID)
  .text._ZN8touchgfx4GPIO4initEv
-                0x08007698       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
-                0x08007698                touchgfx::GPIO::init()
+                0x0800768c       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+                0x0800768c                touchgfx::GPIO::init()
  .text._ZN8touchgfx4GPIO3getENS0_7GPIO_IDE
-                0x080076b8        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
-                0x080076b8                touchgfx::GPIO::get(touchgfx::GPIO::GPIO_ID)
+                0x080076ac        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+                0x080076ac                touchgfx::GPIO::get(touchgfx::GPIO::GPIO_ID)
  .text._ZN8touchgfx4GPIO6toggleENS0_7GPIO_IDE
-                0x080076c4       0x1a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
-                0x080076c4                touchgfx::GPIO::toggle(touchgfx::GPIO::GPIO_ID)
+                0x080076b8       0x1a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+                0x080076b8                touchgfx::GPIO::toggle(touchgfx::GPIO::GPIO_ID)
  .text._ZN8touchgfx24ResistiveTouchController4initEv
-                0x080076de       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
-                0x080076de                touchgfx::ResistiveTouchController::init()
+                0x080076d2       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
+                0x080076d2                touchgfx::ResistiveTouchController::init()
  .text._ZN8touchgfx24ResistiveTouchController11sampleTouchERlS1_
-                0x080076f4       0x2a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
-                0x080076f4                touchgfx::ResistiveTouchController::sampleTouch(long&, long&)
+                0x080076e8       0x2a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
+                0x080076e8                touchgfx::ResistiveTouchController::sampleTouch(long&, long&)
  .text._ZN8touchgfx13DMA_Interface5flushEv
-                0x0800771e        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x0800771e                touchgfx::DMA_Interface::flush()
+                0x08007712        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x08007712                touchgfx::DMA_Interface::flush()
  .text._ZN10STM32F4DMA18signalDMAInterruptEv
-                0x08007728        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x08007728                STM32F4DMA::signalDMAInterrupt()
+                0x0800771c        0xa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x0800771c                STM32F4DMA::signalDMAInterrupt()
  .text._ZL17HAL_DMA2D_SetModeP21__DMA2D_HandleTypeDefmmm
-                0x08007732       0x30 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
- *fill*         0x08007762        0x2 
+                0x08007726       0x30 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+ *fill*         0x08007756        0x2 
  .text.DMA2D_XferCpltCallback
-                0x08007764       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x08007758       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
  .text.DMA2D_XferErrorCallback
-                0x08007778        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
- *fill*         0x0800777a        0x2 
+                0x0800776c        0x2 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+ *fill*         0x0800776e        0x2 
  .text._ZN10STM32F4DMA11getBlitCapsEv
-                0x0800777c       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x0800777c                STM32F4DMA::getBlitCaps()
+                0x08007770       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x08007770                STM32F4DMA::getBlitCaps()
  .text._ZN10STM32F4DMAD2Ev
-                0x08007790       0x28 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x08007790                STM32F4DMA::~STM32F4DMA()
-                0x08007790                STM32F4DMA::~STM32F4DMA()
+                0x08007784       0x28 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x08007784                STM32F4DMA::~STM32F4DMA()
+                0x08007784                STM32F4DMA::~STM32F4DMA()
  .text._ZN10STM32F4DMAD0Ev
-                0x080077b8       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x080077b8                STM32F4DMA::~STM32F4DMA()
- *fill*         0x080077ce        0x2 
+                0x080077ac       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x080077ac                STM32F4DMA::~STM32F4DMA()
+ *fill*         0x080077c2        0x2 
  .text._ZN10STM32F4DMA10initializeEv
-                0x080077d0       0x34 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x080077d0                STM32F4DMA::initialize()
+                0x080077c4       0x34 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x080077c4                STM32F4DMA::initialize()
  .text._ZN10STM32F4DMA13setupDataCopyERKN8touchgfx6BlitOpE
-                0x08007804      0x1c8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x08007804                STM32F4DMA::setupDataCopy(touchgfx::BlitOp const&)
+                0x080077f8      0x1c8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x080077f8                STM32F4DMA::setupDataCopy(touchgfx::BlitOp const&)
  .text._ZN10STM32F4DMA13setupDataFillERKN8touchgfx6BlitOpE
-                0x080079cc      0x118 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x080079cc                STM32F4DMA::setupDataFill(touchgfx::BlitOp const&)
+                0x080079c0      0x118 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x080079c0                STM32F4DMA::setupDataFill(touchgfx::BlitOp const&)
  .text._ZN10STM32F4DMAC2Ev
-                0x08007ae4       0x38 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
-                0x08007ae4                STM32F4DMA::STM32F4DMA()
-                0x08007ae4                STM32F4DMA::STM32F4DMA()
+                0x08007ad8       0x38 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+                0x08007ad8                STM32F4DMA::STM32F4DMA()
+                0x08007ad8                STM32F4DMA::STM32F4DMA()
  .text._ZN8touchgfx3HAL21setDisplayOrientationENS_18DisplayOrientationE
-                0x08007b1c        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007b1c                touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
+                0x08007b10        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007b10                touchgfx::HAL::setDisplayOrientation(touchgfx::DisplayOrientation)
  .text._ZN8touchgfx3HAL11getBlitCapsEv
-                0x08007b28        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007b28                touchgfx::HAL::getBlitCaps()
+                0x08007b1c        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007b1c                touchgfx::HAL::getBlitCaps()
  .text._ZN8touchgfx3HAL9sampleKeyERh
-                0x08007b34        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007b34                touchgfx::HAL::sampleKey(unsigned char&)
+                0x08007b28        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007b28                touchgfx::HAL::sampleKey(unsigned char&)
  .text._ZN8touchgfx3HAL9taskDelayEt
-                0x08007b38        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007b38                touchgfx::HAL::taskDelay(unsigned short)
+                0x08007b2c        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007b2c                touchgfx::HAL::taskDelay(unsigned short)
  .text._ZN8touchgfx3HAL31performDisplayOrientationChangeEv
-                0x08007b44       0x6c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007b44                touchgfx::HAL::performDisplayOrientationChange()
+                0x08007b38       0x6c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007b38                touchgfx::HAL::performDisplayOrientationChange()
  .text._ZNK10STM32F4HAL17getTFTFrameBufferEv
-                0x08007bb0        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007bb0                STM32F4HAL::getTFTFrameBuffer() const
+                0x08007ba4        0xc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007ba4                STM32F4HAL::getTFTFrameBuffer() const
  .text._ZN10STM32F4HAL17setTFTFrameBufferEPt
-                0x08007bbc       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007bbc                STM32F4HAL::setTFTFrameBuffer(unsigned short*)
+                0x08007bb0       0x10 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007bb0                STM32F4HAL::setTFTFrameBuffer(unsigned short*)
  .text._ZN10STM32F4HAL17getTFTCurrentLineEv
-                0x08007bcc       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007bcc                STM32F4HAL::getTFTCurrentLine()
+                0x08007bc0       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007bc0                STM32F4HAL::getTFTCurrentLine()
  .text._ZN10STM32F4HAL19configureInterruptsEv
-                0x08007bec       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007bec                STM32F4HAL::configureInterrupts()
+                0x08007be0       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007be0                STM32F4HAL::configureInterrupts()
  .text._ZN10STM32F4HAL28enableLCDControllerInterruptEv
-                0x08007c00       0x30 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007c00                STM32F4HAL::enableLCDControllerInterrupt()
+                0x08007bf4       0x30 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007bf4                STM32F4HAL::enableLCDControllerInterrupt()
  .text._ZN10STM32F4HAL17disableInterruptsEv
-                0x08007c30       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007c30                STM32F4HAL::disableInterrupts()
+                0x08007c24       0x20 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007c24                STM32F4HAL::disableInterrupts()
  .text._ZN10STM32F4HAL16enableInterruptsEv
-                0x08007c50       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007c50                STM32F4HAL::enableInterrupts()
+                0x08007c44       0x1c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007c44                STM32F4HAL::enableInterrupts()
  .text._ZN8touchgfx3HAL15backPorchExitedEv
-                0x08007c6c       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007c6c                touchgfx::HAL::backPorchExited()
+                0x08007c60       0x14 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007c60                touchgfx::HAL::backPorchExited()
  .text._ZN8touchgfx3HAL28setFrameBufferStartAddressesEPvS1_S1_
-                0x08007c80       0x44 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007c80                touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)
+                0x08007c74       0x44 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007c74                touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)
  .text._ZN8touchgfx3HAL26setFrameBufferStartAddressEPvtbb
-                0x08007cc4       0xac TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007cc4                touchgfx::HAL::setFrameBufferStartAddress(void*, unsigned short, bool, bool)
+                0x08007cb8       0xac TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007cb8                touchgfx::HAL::setFrameBufferStartAddress(void*, unsigned short, bool, bool)
  .text.LTDC_IRQHandler
-                0x08007d70       0x6c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
-                0x08007d70                LTDC_IRQHandler
+                0x08007d64       0x6c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+                0x08007d64                LTDC_IRQHandler
  .text._Z12MX_TIM4_Initv
-                0x08007ddc       0xb0 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
-                0x08007ddc                MX_TIM4_Init()
+                0x08007dd0       0xb0 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+                0x08007dd0                MX_TIM4_Init()
  .text._Z19HAL_TIM_MspPostInitP17TIM_HandleTypeDef
-                0x08007e8c       0x58 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
-                0x08007e8c                HAL_TIM_MspPostInit(TIM_HandleTypeDef*)
+                0x08007e80       0x58 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+                0x08007e80                HAL_TIM_MspPostInit(TIM_HandleTypeDef*)
  .text._Z12MX_TIM9_Initv
-                0x08007ee4       0x98 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
-                0x08007ee4                MX_TIM9_Init()
+                0x08007ed8       0x98 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+                0x08007ed8                MX_TIM9_Init()
  .text.MX_ADC1_Init
-                0x08007f7c       0xa8 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
-                0x08007f7c                MX_ADC1_Init
+                0x08007f70       0xa8 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+                0x08007f70                MX_ADC1_Init
  .text.HAL_ADC_MspInit
-                0x08008024       0xdc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
-                0x08008024                HAL_ADC_MspInit
+                0x08008018       0xdc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+                0x08008018                HAL_ADC_MspInit
+ *fill*         0x080080f4        0x4 
  .text.HAL_ADC_ConvCpltCallback
-                0x08008100       0x68 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
-                0x08008100                HAL_ADC_ConvCpltCallback
+                0x080080f8       0x68 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+                0x080080f8                HAL_ADC_ConvCpltCallback
  .text._Z11MX_DMA_Initv
-                0x08008168       0x34 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
-                0x08008168                MX_DMA_Init()
+                0x08008160       0x34 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
+                0x08008160                MX_DMA_Init()
  .text._ZN18PeltierApplicationD2Ev
-                0x0800819c        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x0800819c                PeltierApplication::~PeltierApplication()
-                0x0800819c                PeltierApplication::~PeltierApplication()
+                0x08008194        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x08008194                PeltierApplication::~PeltierApplication()
+                0x08008194                PeltierApplication::~PeltierApplication()
  .text._Z7ADCInitiPPc
-                0x0800819e        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x0800819e                ADCInit(int, char**)
+                0x08008196        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x08008196                ADCInit(int, char**)
  .text._ZN18PeltierApplicationD0Ev
-                0x080081a0        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080081a0                PeltierApplication::~PeltierApplication()
- *fill*         0x080081ae        0x2 
+                0x08008198        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x08008198                PeltierApplication::~PeltierApplication()
+ *fill*         0x080081a6        0x2 
  .text._Z8vPwmInitiPPc
-                0x080081b0       0x54 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080081b0                vPwmInit(int, char**)
+                0x080081a8       0x54 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080081a8                vPwmInit(int, char**)
  .text._ZN18PeltierApplicationC2Ev
-                0x08008204       0x2c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008204                PeltierApplication::PeltierApplication()
-                0x08008204                PeltierApplication::PeltierApplication()
+                0x080081fc       0x2c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080081fc                PeltierApplication::PeltierApplication()
+                0x080081fc                PeltierApplication::PeltierApplication()
  .text.Error_Handler
-                0x08008230        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008230                Error_Handler
- *fill*         0x08008232        0x2 
+                0x08008228        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x08008228                Error_Handler
+ *fill*         0x0800822a        0x2 
  .text.CDC_ReceiveCallback
-                0x08008234       0xac TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008234                CDC_ReceiveCallback
+                0x0800822c       0xac TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800822c                CDC_ReceiveCallback
  .text._ZN18PeltierApplication8SetPWM10Et
-                0x080082e0        0x4 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080082e0                PeltierApplication::SetPWM10(unsigned short)
+                0x080082d8        0x4 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080082d8                PeltierApplication::SetPWM10(unsigned short)
  .text._Z7vPwmSetiPPc
-                0x080082e4       0x70 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080082e4                vPwmSet(int, char**)
+                0x080082dc       0x70 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080082dc                vPwmSet(int, char**)
  .text._ZN18PeltierApplication11Pwm10_StartEv
-                0x08008354       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008354                PeltierApplication::Pwm10_Start()
+                0x0800834c       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800834c                PeltierApplication::Pwm10_Start()
  .text._Z9vPwmStartiPPc
-                0x08008374       0x48 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008374                vPwmStart(int, char**)
+                0x0800836c       0x48 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800836c                vPwmStart(int, char**)
  .text._ZN18PeltierApplication10Pwm10_StopEv
-                0x080083bc       0x10 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080083bc                PeltierApplication::Pwm10_Stop()
+                0x080083b4       0x10 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080083b4                PeltierApplication::Pwm10_Stop()
  .text._Z8vPwmStopiPPc
-                0x080083cc       0x48 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080083cc                vPwmStop(int, char**)
+                0x080083c4       0x48 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080083c4                vPwmStop(int, char**)
  .text._ZN18PeltierApplication21getPeltierTemperatureEv
-                0x08008414       0x50 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008414                PeltierApplication::getPeltierTemperature()
+                0x0800840c       0x50 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800840c                PeltierApplication::getPeltierTemperature()
  .text._ZN18PeltierApplication17getExtTemperatureEv
-                0x08008464       0x50 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008464                PeltierApplication::getExtTemperature()
+                0x0800845c       0x50 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800845c                PeltierApplication::getExtTemperature()
  .text._Z13getADC_ResultiPPc
-                0x080084b4       0x60 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x080084b4                getADC_Result(int, char**)
+                0x080084ac       0x60 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x080084ac                getADC_Result(int, char**)
  .text._Z9ShellTaskPv
-                0x08008514       0x18 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x08008514                ShellTask(void*)
+                0x0800850c       0x18 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x0800850c                ShellTask(void*)
  .text._Z17xStartDefaultTaskPv
-                0x0800852c       0xec TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
-                0x0800852c                xStartDefaultTask(void*)
+                0x08008524       0xec TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+                0x08008524                xStartDefaultTask(void*)
  .text._ZN6cShellD2Ev
-                0x08008618        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008618                cShell::~cShell()
-                0x08008618                cShell::~cShell()
+                0x08008610        0x2 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008610                cShell::~cShell()
+                0x08008610                cShell::~cShell()
  .text._ZN6cShellD0Ev
-                0x0800861a        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x0800861a                cShell::~cShell()
+                0x08008612        0xe TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008612                cShell::~cShell()
  .text._ZN6cShellC2Ev
-                0x08008628        0xc TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008628                cShell::cShell()
-                0x08008628                cShell::cShell()
+                0x08008620        0xc TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008620                cShell::cShell()
+                0x08008620                cShell::cShell()
  .text._ZN6cShell8vCmdExecEPK14ShellCommand_tPciPS3_
-                0x08008634       0x2a TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008634                cShell::vCmdExec(ShellCommand_t const*, char*, int, char**)
+                0x0800862c       0x2a TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x0800862c                cShell::vCmdExec(ShellCommand_t const*, char*, int, char**)
  .text._Z13vListCommandsP14ShellCommand_t
-                0x0800865e       0x1c TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x0800865e                vListCommands(ShellCommand_t*)
- *fill*         0x0800867a        0x2 
+                0x08008656       0x1c TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008656                vListCommands(ShellCommand_t*)
+ *fill*         0x08008672        0x2 
  .text._Z6vUsagePc
-                0x0800867c       0x40 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x0800867c                vUsage(char*)
+                0x08008674       0x40 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008674                vUsage(char*)
  .text._Z11vCmdSystimeiPPc
-                0x080086bc       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x080086bc                vCmdSystime(int, char**)
+                0x080086b4       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x080086b4                vCmdSystime(int, char**)
  .text._Z8vCmdInfoiPPc
-                0x080086dc       0x94 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x080086dc                vCmdInfo(int, char**)
+                0x080086d4       0x94 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x080086d4                vCmdInfo(int, char**)
  .text._Z8vSendACKiPPc
-                0x08008770       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008770                vSendACK(int, char**)
+                0x08008768       0x20 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008768                vSendACK(int, char**)
  .text._ZN6cShell7vStrtokEPcPKcPS0_
-                0x08008790       0x38 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008790                cShell::vStrtok(char*, char const*, char**)
+                0x08008788       0x38 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008788                cShell::vStrtok(char*, char const*, char**)
  .text._ZN6cShell9ShellTaskEPvPc
-                0x080087c8      0x158 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x080087c8                cShell::ShellTask(void*, char*)
+                0x080087c0      0x158 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x080087c0                cShell::ShellTask(void*, char*)
  .text._ZN6cShell12vShellThreadEPv
-                0x08008920       0x60 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
-                0x08008920                cShell::vShellThread(void*)
+                0x08008918       0x60 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+                0x08008918                cShell::vShellThread(void*)
  .text.vListInitialise
-                0x08008980       0x16 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
-                0x08008980                vListInitialise
+                0x08008978       0x16 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+                0x08008978                vListInitialise
  .text.vListInitialiseItem
-                0x08008996        0x6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
-                0x08008996                vListInitialiseItem
+                0x0800898e        0x6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+                0x0800898e                vListInitialiseItem
  .text.vListInsertEnd
-                0x0800899c       0x18 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
-                0x0800899c                vListInsertEnd
+                0x08008994       0x18 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+                0x08008994                vListInsertEnd
  .text.vListInsert
-                0x080089b4       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
-                0x080089b4                vListInsert
+                0x080089ac       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+                0x080089ac                vListInsert
  .text.uxListRemove
-                0x080089e8       0x26 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
-                0x080089e8                uxListRemove
+                0x080089e0       0x26 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+                0x080089e0                uxListRemove
  .text.prvIsQueueFull
-                0x08008a0e       0x1e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008a06       0x1e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
  .text.prvIsQueueEmpty
-                0x08008a2c       0x1a TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008a24       0x1a TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
  .text.prvCopyDataToQueue
-                0x08008a46       0x76 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008a3e       0x76 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
  .text.prvCopyDataFromQueue
-                0x08008abc       0x24 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008ab4       0x24 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
  .text.prvUnlockQueue
-                0x08008ae0       0x6e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
- *fill*         0x08008b4e        0x2 
+                0x08008ad8       0x6e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ *fill*         0x08008b46        0x2 
  .text.xQueueGenericReset
-                0x08008b50       0x80 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008b50                xQueueGenericReset
+                0x08008b48       0x80 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008b48                xQueueGenericReset
  .text.prvInitialiseNewQueue
-                0x08008bd0       0x22 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008bc8       0x22 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
  .text.xQueueGenericCreate
-                0x08008bf2       0x48 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008bf2                xQueueGenericCreate
- *fill*         0x08008c3a        0x2 
+                0x08008bea       0x48 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008bea                xQueueGenericCreate
+ *fill*         0x08008c32        0x2 
  .text.xQueueGenericSend
-                0x08008c3c      0x188 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008c3c                xQueueGenericSend
+                0x08008c34      0x188 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008c34                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x08008dc4       0xde TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008dc4                xQueueGenericSendFromISR
+                0x08008dbc       0xde TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008dbc                xQueueGenericSendFromISR
  .text.xQueueGiveFromISR
-                0x08008ea2       0xbc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008ea2                xQueueGiveFromISR
- *fill*         0x08008f5e        0x2 
+                0x08008e9a       0xbc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008e9a                xQueueGiveFromISR
+ *fill*         0x08008f56        0x2 
  .text.xQueueGenericReceive
-                0x08008f60      0x1b0 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08008f60                xQueueGenericReceive
+                0x08008f58      0x1b0 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08008f58                xQueueGenericReceive
  .text.vQueueAddToRegistry
-                0x08009110       0x28 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08009110                vQueueAddToRegistry
+                0x08009108       0x28 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08009108                vQueueAddToRegistry
  .text.vQueueWaitForMessageRestricted
-                0x08009138       0x52 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
-                0x08009138                vQueueWaitForMessageRestricted
- *fill*         0x0800918a        0x2 
+                0x08009130       0x52 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+                0x08009130                vQueueWaitForMessageRestricted
+ *fill*         0x08009182        0x2 
  .text.prvResetNextTaskUnblockTime
-                0x0800918c       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009184       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvDeleteTCB
-                0x080091c0       0x12 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080091b8       0x12 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvInitialiseNewTask
-                0x080091d2       0x92 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080091ca       0x92 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvInitialiseTaskLists
-                0x08009264       0x68 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x0800925c       0x68 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x080092cc       0xac TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080092c4       0xac TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x08009378       0x98 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009370       0x98 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.xTaskCreate
-                0x08009410       0x62 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009410                xTaskCreate
- *fill*         0x08009472        0x2 
+                0x08009408       0x62 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009408                xTaskCreate
+ *fill*         0x0800946a        0x2 
  .text.vTaskStartScheduler
-                0x08009474       0x84 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009474                vTaskStartScheduler
+                0x0800946c       0x84 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x0800946c                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x080094f8       0x10 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x080094f8                vTaskSuspendAll
+                0x080094f0       0x10 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080094f0                vTaskSuspendAll
  .text.xTaskGetTickCount
-                0x08009508        0xc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009508                xTaskGetTickCount
+                0x08009500        0xc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009500                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x08009514      0x120 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009514                xTaskIncrementTick
+                0x0800950c      0x120 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x0800950c                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x08009634       0xfc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009634                xTaskResumeAll
+                0x0800962c       0xfc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x0800962c                xTaskResumeAll
  .text.prvCheckTasksWaitingTermination
-                0x08009730       0x5c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009728       0x5c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.prvIdleTask
-                0x0800978c       0x28 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009784       0x28 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .text.vTaskSwitchContext
-                0x080097b4       0x9c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x080097b4                vTaskSwitchContext
+                0x080097ac       0x9c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080097ac                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x08009850       0x30 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009850                vTaskPlaceOnEventList
+                0x08009848       0x30 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009848                vTaskPlaceOnEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x08009880       0x38 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009880                vTaskPlaceOnEventListRestricted
+                0x08009878       0x38 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009878                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x080098b8       0x8c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x080098b8                xTaskRemoveFromEventList
+                0x080098b0       0x8c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080098b0                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x08009944       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009944                vTaskSetTimeOutState
+                0x0800993c       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x0800993c                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x08009970       0x80 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009970                xTaskCheckForTimeOut
+                0x08009968       0x80 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009968                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x080099f0        0xc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x080099f0                vTaskMissedYield
+                0x080099e8        0xc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080099e8                vTaskMissedYield
  .text.xTaskGetSchedulerState
-                0x080099fc       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x080099fc                xTaskGetSchedulerState
+                0x080099f4       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x080099f4                xTaskGetSchedulerState
  .text.vTaskPriorityInherit
-                0x08009a1c       0xa4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009a1c                vTaskPriorityInherit
+                0x08009a14       0xa4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009a14                vTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x08009ac0       0xb4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009ac0                xTaskPriorityDisinherit
+                0x08009ab8       0xb4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009ab8                xTaskPriorityDisinherit
  .text.pvTaskIncrementMutexHeldCount
-                0x08009b74       0x1c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
-                0x08009b74                pvTaskIncrementMutexHeldCount
+                0x08009b6c       0x1c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+                0x08009b6c                pvTaskIncrementMutexHeldCount
  .text.prvGetNextExpireTime
-                0x08009b90       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009b88       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvInsertTimerInActiveList
-                0x08009bb0       0x48 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009ba8       0x48 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvCheckForValidListAndQueue
-                0x08009bf8       0x5c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009bf0       0x5c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.xTimerCreateTimerTask
-                0x08009c54       0x54 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
-                0x08009c54                xTimerCreateTimerTask
+                0x08009c4c       0x54 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009c4c                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x08009ca8       0x6c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
-                0x08009ca8                xTimerGenericCommand
+                0x08009ca0       0x6c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009ca0                xTimerGenericCommand
  .text.prvSwitchTimerLists
-                0x08009d14       0x78 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009d0c       0x78 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvSampleTimeNow
-                0x08009d8c       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009d84       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvProcessExpiredTimer
-                0x08009db8       0x60 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009db0       0x60 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvProcessTimerOrBlockTask
-                0x08009e18       0x74 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009e10       0x74 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvProcessReceivedCommands
-                0x08009e8c       0xe4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x08009e84       0xe4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .text.prvTimerTask
-                0x08009f70       0x16 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
- *fill*         0x08009f86        0x2 
+                0x08009f68       0x16 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ *fill*         0x08009f7e        0x2 
  .text.prvHeapInit
-                0x08009f88       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+                0x08009f80       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
  .text.pvPortMalloc
-                0x08009fb4       0xa4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
-                0x08009fb4                pvPortMalloc
+                0x08009fac       0xa4 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+                0x08009fac                pvPortMalloc
  .text.vPortFree
-                0x0800a058       0x44 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
-                0x0800a058                vPortFree
+                0x0800a050       0x44 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+                0x0800a050                vPortFree
  .text.prvTaskExitError
-                0x0800a09c       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+                0x0800a094       0x34 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
  .text.prvPortStartFirstTask
-                0x0800a0d0       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+                0x0800a0c8       0x20 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
  .text.vPortEnableVFP
-                0x0800a0f0       0x14 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+                0x0800a0e8       0x14 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
  .text.pxPortInitialiseStack
-                0x0800a104       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
-                0x0800a104                pxPortInitialiseStack
+                0x0800a0fc       0x2c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+                0x0800a0fc                pxPortInitialiseStack
+ *fill*         0x0800a128        0x8 
  .text.SVC_Handler
                 0x0800a130       0x24 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
                 0x0800a130                SVC_Handler
@@ -8812,48 +8814,48 @@ ExtFlashSection
                 [!provide]                PROVIDE (__stop_ExtFlashSection, .)
 
 TextFlashSection
-                0x08036110      0x10e
+                0x08036110      0x102
                 [!provide]                PROVIDE (__start_TextFlashSection, .)
  TextFlashSection
-                0x08036110       0xf8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
+                0x08036110       0xec TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
                 0x08036110                textsGb
  TextFlashSection
-                0x08036208       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
+                0x080361fc       0x16 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
                 [!provide]                PROVIDE (__stop_TextFlashSection, .)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08036220        0x8
-                0x08036220                __exidx_start = .
+.ARM            0x08036214        0x8
+                0x08036214                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08036220        0x8 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp\libgcc.a(_udivmoddi4.o)
-                0x08036228                __exidx_end = .
+ .ARM.exidx     0x08036214        0x8 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp\libgcc.a(_udivmoddi4.o)
+                0x0803621c                __exidx_end = .
 
-.rel.dyn        0x08036228        0x0
- .rel.iplt      0x08036228        0x0 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
+.rel.dyn        0x0803621c        0x0
+ .rel.iplt      0x0803621c        0x0 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
 
-.preinit_array  0x08036228        0x0
-                0x08036228                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0803621c        0x0
+                0x0803621c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x08036228                PROVIDE (__preinit_array_end, .)
+                0x0803621c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x08036228       0x14
-                0x08036228                PROVIDE (__init_array_start, .)
+.init_array     0x0803621c       0x14
+                0x0803621c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x08036228        0x4 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
- .init_array    0x0803622c        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
- .init_array    0x08036230        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
- .init_array    0x08036234        0x4 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
- .init_array    0x08036238        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
-                0x0803623c                PROVIDE (__init_array_end, .)
+ .init_array    0x0803621c        0x4 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
+ .init_array    0x08036220        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .init_array    0x08036224        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
+ .init_array    0x08036228        0x4 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+ .init_array    0x0803622c        0x4 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+                0x08036230                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0803623c        0x4
+.fini_array     0x08036230        0x4
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0803623c        0x4 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
+ .fini_array    0x08036230        0x4 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
 
 .pbss           0x20000000        0x0
@@ -8872,9 +8874,9 @@ TextFlashSection
  *(privileged_initialized_data*)
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _epdata = .
-                0x08036240                _sidata = LOADADDR (.data)
+                0x08036234                _sidata = LOADADDR (.data)
 
-.data           0x20000200      0x480 load address 0x08036240
+.data           0x20000200      0x480 load address 0x08036234
                 0x20000200                . = ALIGN (0x4)
                 0x20000200                _sdata = .
  *(.data)
@@ -8977,15 +8979,15 @@ TextFlashSection
                 0x20000514                __global_locale
                 0x20000680                . = ALIGN (0x4)
                 0x20000680                _edata = .
-                0x080366c0                _siccmram = LOADADDR (.ccmram)
+                0x080366b4                _siccmram = LOADADDR (.ccmram)
 
-.jcr            0x20000680        0x0 load address 0x080366c0
+.jcr            0x20000680        0x0 load address 0x080366b4
  .jcr           0x20000680        0x0 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
 
-.igot.plt       0x20000680        0x0 load address 0x080366c0
+.igot.plt       0x20000680        0x0 load address 0x080366b4
  .igot.plt      0x20000680        0x0 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x080366c0
+.ccmram         0x10000000        0x0 load address 0x080366b4
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sccmram = .
  *(.ccmram)
@@ -9804,7 +9806,7 @@ TextFlashSection
                 0x00002a14       0x22 c:/touchgfx/4.10.0/env/mingw/msys/1.0/gnu-arm-gcc/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/softfp/crtn.o
 OUTPUT(TouchGFX/build/bin/target.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x8c8ec
+.debug_info     0x00000000    0x8c8a1
  .debug_info    0x00000000      0xeb8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenPresenter.o
  .debug_info    0x00000eb8     0x2a03 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenView.o
  .debug_info    0x000038bb     0x2a25 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/settingscreen_screen/SettingScreenView.o
@@ -9838,64 +9840,64 @@ OUTPUT(TouchGFX/build/bin/target.elf elf32-littlearm)
  .debug_info    0x0002922d       0x58 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/images/src/Arrow_Dx.o
  .debug_info    0x00029285       0x58 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/images/src/Arrow_Sx.o
  .debug_info    0x000292dd       0x58 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/images/src/icon_manual.o
- .debug_info    0x00029335      0x74e TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
- .debug_info    0x00029a83      0xb91 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
- .debug_info    0x0002a614     0x21db TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
- .debug_info    0x0002c7ef      0x6b1 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.o
- .debug_info    0x0002cea0     0x2496 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
- .debug_info    0x0002f336     0x8826 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
- .debug_info    0x00037b5c      0x75b TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
- .debug_info    0x000382b7      0xc43 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
- .debug_info    0x00038efa     0x1067 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
- .debug_info    0x00039f61     0x3b04 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
- .debug_info    0x0003da65     0x3af6 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
- .debug_info    0x0004155b     0x22c6 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
- .debug_info    0x00043821     0x2131 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
- .debug_info    0x00045952     0x1357 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
- .debug_info    0x00046ca9     0x34c7 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
- .debug_info    0x0004a170     0x2683 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
- .debug_info    0x0004c7f3      0xabe TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_info    0x0004d2b1     0x22a8 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_info    0x0004f559     0x315c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_info    0x000526b5     0x1883 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_info    0x00053f38      0xb52 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
- .debug_info    0x00054a8a      0x529 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_info    0x00054fb3     0x14a1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
- .debug_info    0x00056454     0x19d1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
- .debug_info    0x00057e25      0xc2c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
- .debug_info    0x00058a51     0x165b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
- .debug_info    0x0005a0ac     0x289c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
- .debug_info    0x0005c948     0x1a4f TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
- .debug_info    0x0005e397      0xe31 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
- .debug_info    0x0005f1c8      0xd3f TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
- .debug_info    0x0005ff07     0x1181 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x00061088     0x15cf TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_info    0x00062657     0x13eb TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
- .debug_info    0x00063a42     0x1785 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x000651c7     0x1271 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_info    0x00066438     0x1857 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
- .debug_info    0x00067c8f      0xfa6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x00068c35     0x36e4 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_info    0x0006c319     0x1b4b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
- .debug_info    0x0006de64     0x1f9b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
- .debug_info    0x0006fdff      0xe50 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
- .debug_info    0x00070c4f     0x1249 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x00071e98      0xec1 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_info    0x00072d59     0x15e5 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
- .debug_info    0x0007433e     0x24a3 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_info    0x000767e1     0x399d TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_info    0x0007a17e     0x1b62 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_info    0x0007bce0     0x1739 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
- .debug_info    0x0007d419     0x232d TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
- .debug_info    0x0007f746     0x1f74 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
- .debug_info    0x000816ba     0x19ff TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
- .debug_info    0x000830b9     0x1cbc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
- .debug_info    0x00084d75     0x14ef TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
- .debug_info    0x00086264     0x13fe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
- .debug_info    0x00087662     0x15e3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
- .debug_info    0x00088c45     0x2926 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
- .debug_info    0x0008b56b     0x131f TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
- .debug_info    0x0008c88a       0x62 TouchGFX/build/ST/STM32F429IDISCO/gcc/startup_stm32f429xx.o
+ .debug_info    0x00029335      0x728 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
+ .debug_info    0x00029a5d      0xb91 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_info    0x0002a5ee     0x21db TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
+ .debug_info    0x0002c7c9      0x6b1 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.o
+ .debug_info    0x0002ce7a     0x2471 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+ .debug_info    0x0002f2eb     0x8826 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+ .debug_info    0x00037b11      0x75b TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+ .debug_info    0x0003826c      0xc43 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+ .debug_info    0x00038eaf     0x1067 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
+ .debug_info    0x00039f16     0x3b04 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+ .debug_info    0x0003da1a     0x3af6 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+ .debug_info    0x00041510     0x22c6 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+ .debug_info    0x000437d6     0x2131 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+ .debug_info    0x00045907     0x1357 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
+ .debug_info    0x00046c5e     0x34c7 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+ .debug_info    0x0004a125     0x2683 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+ .debug_info    0x0004c7a8      0xabe TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_info    0x0004d266     0x22a8 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_info    0x0004f50e     0x315c TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_info    0x0005266a     0x1883 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_info    0x00053eed      0xb52 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+ .debug_info    0x00054a3f      0x529 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_info    0x00054f68     0x14a1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_info    0x00056409     0x19d1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
+ .debug_info    0x00057dda      0xc2c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
+ .debug_info    0x00058a06     0x165b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
+ .debug_info    0x0005a061     0x289c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
+ .debug_info    0x0005c8fd     0x1a4f TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
+ .debug_info    0x0005e34c      0xe31 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
+ .debug_info    0x0005f17d      0xd3f TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
+ .debug_info    0x0005febc     0x1181 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x0006103d     0x15cf TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_info    0x0006260c     0x13eb TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
+ .debug_info    0x000639f7     0x1785 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x0006517c     0x1271 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_info    0x000663ed     0x1857 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
+ .debug_info    0x00067c44      0xfa6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x00068bea     0x36e4 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_info    0x0006c2ce     0x1b4b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
+ .debug_info    0x0006de19     0x1f9b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_info    0x0006fdb4      0xe50 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_info    0x00070c04     0x1249 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x00071e4d      0xec1 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_info    0x00072d0e     0x15e5 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
+ .debug_info    0x000742f3     0x24a3 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_info    0x00076796     0x399d TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_info    0x0007a133     0x1b62 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_info    0x0007bc95     0x1739 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
+ .debug_info    0x0007d3ce     0x232d TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_info    0x0007f6fb     0x1f74 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
+ .debug_info    0x0008166f     0x19ff TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
+ .debug_info    0x0008306e     0x1cbc TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
+ .debug_info    0x00084d2a     0x14ef TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
+ .debug_info    0x00086219     0x13fe TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
+ .debug_info    0x00087617     0x15e3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
+ .debug_info    0x00088bfa     0x2926 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
+ .debug_info    0x0008b520     0x131f TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
+ .debug_info    0x0008c83f       0x62 TouchGFX/build/ST/STM32F429IDISCO/gcc/startup_stm32f429xx.o
 
 .debug_abbrev   0x00000000    0x12f47
  .debug_abbrev  0x00000000      0x417 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenPresenter.o
@@ -10313,7 +10315,7 @@ OUTPUT(TouchGFX/build/bin/target.elf elf32-littlearm)
  .debug_ranges  0x00002ff8       0x50 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
  .debug_ranges  0x00003048       0x20 TouchGFX/build/ST/STM32F429IDISCO/gcc/startup_stm32f429xx.o
 
-.debug_line     0x00000000    0x1ef9c
+.debug_line     0x00000000    0x1ef9b
  .debug_line    0x00000000      0x60e TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenPresenter.o
  .debug_line    0x0000060e      0x88c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenView.o
  .debug_line    0x00000e9a      0x8b3 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/settingscreen_screen/SettingScreenView.o
@@ -10351,62 +10353,62 @@ OUTPUT(TouchGFX/build/bin/target.elf elf32-littlearm)
  .debug_line    0x00008c33      0x3aa TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
  .debug_line    0x00008fdd      0x4ca TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
  .debug_line    0x000094a7      0x49a TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.o
- .debug_line    0x00009941      0x7cd TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
- .debug_line    0x0000a10e     0x126a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
- .debug_line    0x0000b378      0x3ff TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
- .debug_line    0x0000b777      0x307 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
- .debug_line    0x0000ba7e      0x41a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
- .debug_line    0x0000be98      0x786 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
- .debug_line    0x0000c61e      0x76e TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
- .debug_line    0x0000cd8c      0x62e TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
- .debug_line    0x0000d3ba      0x599 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
- .debug_line    0x0000d953      0x2a3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
- .debug_line    0x0000dbf6      0xadc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
- .debug_line    0x0000e6d2      0x689 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
- .debug_line    0x0000ed5b      0x2c2 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_line    0x0000f01d      0x8b2 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_line    0x0000f8cf      0xd6b TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_line    0x0001063a      0x51b TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_line    0x00010b55      0x2f8 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
- .debug_line    0x00010e4d      0x30e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x0001115b      0x318 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
- .debug_line    0x00011473      0x382 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
- .debug_line    0x000117f5      0x253 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
- .debug_line    0x00011a48      0x448 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
- .debug_line    0x00011e90      0x63e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
- .debug_line    0x000124ce      0x409 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
- .debug_line    0x000128d7      0x35e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
- .debug_line    0x00012c35      0x23a TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
- .debug_line    0x00012e6f      0x42b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x0001329a      0x726 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_line    0x000139c0      0x5f6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
- .debug_line    0x00013fb6      0x480 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00014436      0x5a1 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_line    0x000149d7      0x7b0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
- .debug_line    0x00015187      0x410 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00015597     0x1467 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_line    0x000169fe      0xb42 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
- .debug_line    0x00017540      0x84c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
- .debug_line    0x00017d8c      0x2ba TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
- .debug_line    0x00018046      0x511 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x00018557      0x38e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_line    0x000188e5      0x5a2 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
- .debug_line    0x00018e87      0xd74 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_line    0x00019bfb     0x1504 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_line    0x0001b0ff      0x866 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_line    0x0001b965      0x60c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
- .debug_line    0x0001bf71      0x948 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
- .debug_line    0x0001c8b9      0x5e6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
- .debug_line    0x0001ce9f      0x591 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
- .debug_line    0x0001d430      0x631 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
- .debug_line    0x0001da61      0x3b6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
- .debug_line    0x0001de17      0x387 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
- .debug_line    0x0001e19e      0x3b1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
- .debug_line    0x0001e54f      0x5f3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
- .debug_line    0x0001eb42      0x3e2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
- .debug_line    0x0001ef24       0x78 TouchGFX/build/ST/STM32F429IDISCO/gcc/startup_stm32f429xx.o
+ .debug_line    0x00009941      0x7cc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+ .debug_line    0x0000a10d     0x126a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+ .debug_line    0x0000b377      0x3ff TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+ .debug_line    0x0000b776      0x307 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+ .debug_line    0x0000ba7d      0x41a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
+ .debug_line    0x0000be97      0x786 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+ .debug_line    0x0000c61d      0x76e TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+ .debug_line    0x0000cd8b      0x62e TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+ .debug_line    0x0000d3b9      0x599 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+ .debug_line    0x0000d952      0x2a3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
+ .debug_line    0x0000dbf5      0xadc TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+ .debug_line    0x0000e6d1      0x689 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+ .debug_line    0x0000ed5a      0x2c2 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_line    0x0000f01c      0x8b2 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_line    0x0000f8ce      0xd6b TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_line    0x00010639      0x51b TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_line    0x00010b54      0x2f8 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+ .debug_line    0x00010e4c      0x30e TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x0001115a      0x318 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_line    0x00011472      0x382 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
+ .debug_line    0x000117f4      0x253 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
+ .debug_line    0x00011a47      0x448 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
+ .debug_line    0x00011e8f      0x63e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
+ .debug_line    0x000124cd      0x409 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
+ .debug_line    0x000128d6      0x35e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
+ .debug_line    0x00012c34      0x23a TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
+ .debug_line    0x00012e6e      0x42b TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00013299      0x726 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_line    0x000139bf      0x5f6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
+ .debug_line    0x00013fb5      0x480 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00014435      0x5a1 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_line    0x000149d6      0x7b0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
+ .debug_line    0x00015186      0x410 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00015596     0x1467 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_line    0x000169fd      0xb42 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
+ .debug_line    0x0001753f      0x84c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_line    0x00017d8b      0x2ba TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_line    0x00018045      0x511 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x00018556      0x38e TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_line    0x000188e4      0x5a2 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
+ .debug_line    0x00018e86      0xd74 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_line    0x00019bfa     0x1504 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_line    0x0001b0fe      0x866 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_line    0x0001b964      0x60c TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
+ .debug_line    0x0001bf70      0x948 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_line    0x0001c8b8      0x5e6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
+ .debug_line    0x0001ce9e      0x591 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
+ .debug_line    0x0001d42f      0x631 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
+ .debug_line    0x0001da60      0x3b6 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
+ .debug_line    0x0001de16      0x387 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
+ .debug_line    0x0001e19d      0x3b1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
+ .debug_line    0x0001e54e      0x5f3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
+ .debug_line    0x0001eb41      0x3e2 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
+ .debug_line    0x0001ef23       0x78 TouchGFX/build/ST/STM32F429IDISCO/gcc/startup_stm32f429xx.o
 
-.debug_str      0x00000000    0x199e8
+.debug_str      0x00000000    0x199d6
  .debug_str     0x00000000      0xf1b TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenPresenter.o
                                 0xfec (size before relaxing)
  .debug_str     0x00000f1b     0x2263 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/gui/src/splashscreen_screen/SplashScreenView.o
@@ -10473,119 +10475,119 @@ OUTPUT(TouchGFX/build/bin/target.elf elf32-littlearm)
                                 0x19c (size before relaxing)
  .debug_str     0x0000b9f4       0x2e TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/images/src/icon_manual.o
                                 0x1a2 (size before relaxing)
- .debug_str     0x0000ba22       0xea TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
-                                0x89b (size before relaxing)
- .debug_str     0x0000bb0c      0x13a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
+ .debug_str     0x0000ba22       0xd8 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/LanguageGb.o
+                                0x889 (size before relaxing)
+ .debug_str     0x0000bafa      0x13a TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/TypedTextDatabase.o
                                 0xe4a (size before relaxing)
- .debug_str     0x0000bc46      0x185 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
+ .debug_str     0x0000bc34      0x185 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/generated/texts/src/Texts.o
                                0x290a (size before relaxing)
- .debug_str     0x0000bdcb      0x3af TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.o
+ .debug_str     0x0000bdb9      0x3af TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.o
                                 0x78a (size before relaxing)
- .debug_str     0x0000c17a     0x106a TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
-                               0x185c (size before relaxing)
- .debug_str     0x0000d1e4     0x21dc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
+ .debug_str     0x0000c168     0x1058 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/main.o
+                               0x184a (size before relaxing)
+ .debug_str     0x0000d1c0     0x21dc TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/BoardConfiguration.o
                                0x821b (size before relaxing)
- .debug_str     0x0000f3c0       0xe7 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
+ .debug_str     0x0000f39c       0xe7 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/CortexMMCUInstrumentation.o
                                 0x7ca (size before relaxing)
- .debug_str     0x0000f4a7       0x5f TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
+ .debug_str     0x0000f483       0x5f TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/GPIO.o
                                 0x85d (size before relaxing)
- .debug_str     0x0000f506      0x326 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
+ .debug_str     0x0000f4e2      0x326 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/ResistiveTouchController.o
                                 0xd30 (size before relaxing)
- .debug_str     0x0000f82c      0xc2c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
+ .debug_str     0x0000f808      0xc2c TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4DMA.o
                                0x38bc (size before relaxing)
- .debug_str     0x00010458      0x315 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
+ .debug_str     0x00010434      0x315 TouchGFX/build/ST/STM32F429IDISCO/TouchGFX/target/STM32F4HAL.o
                                0x3a8c (size before relaxing)
- .debug_str     0x0001076d      0x277 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
+ .debug_str     0x00010749      0x277 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/timer.o
                                0x1b3c (size before relaxing)
- .debug_str     0x000109e4       0xaa TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
+ .debug_str     0x000109c0       0xaa TouchGFX/build/ST/STM32F429IDISCO/Core/Src/adc.o
                                0x1945 (size before relaxing)
- .debug_str     0x00010a8e       0x11 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
+ .debug_str     0x00010a6a       0x11 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/dma.o
                                0x1229 (size before relaxing)
- .debug_str     0x00010a9f      0x8d1 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
+ .debug_str     0x00010a7b      0x8e3 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/PeltierApplication.o
                                0x2572 (size before relaxing)
- .debug_str     0x00011370      0x1e3 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
+ .debug_str     0x0001135e      0x1e3 TouchGFX/build/ST/STM32F429IDISCO/Core/src/shell.o
                                0x161c (size before relaxing)
- .debug_str     0x00011553      0x278 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_str     0x00011541      0x278 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/list.o
                                 0x750 (size before relaxing)
- .debug_str     0x000117cb      0x6fa TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_str     0x000117b9      0x6fa TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/queue.o
                                 0xe7a (size before relaxing)
- .debug_str     0x00011ec5      0xb37 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_str     0x00011eb3      0xb37 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/tasks.o
                                0x1577 (size before relaxing)
- .debug_str     0x000129fc      0x435 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_str     0x000129ea      0x435 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/timers.o
                                 0xd04 (size before relaxing)
- .debug_str     0x00012e31      0x159 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
+ .debug_str     0x00012e1f      0x159 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_2.o
                                 0x7ba (size before relaxing)
- .debug_str     0x00012f8a      0x183 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
+ .debug_str     0x00012f78      0x183 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
                                 0x4c0 (size before relaxing)
- .debug_str     0x0001310d      0x11c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
+ .debug_str     0x000130fb      0x11c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_hal_timebase_tim.o
                                0x12bc (size before relaxing)
- .debug_str     0x00013229      0x446 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
+ .debug_str     0x00013217      0x446 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/stm32f4xx_it.o
                                0x12ac (size before relaxing)
- .debug_str     0x0001366f      0x135 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
+ .debug_str     0x0001365d      0x135 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/ili9341/ili9341.o
                                 0x3fb (size before relaxing)
- .debug_str     0x000137a4      0x381 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
+ .debug_str     0x00013792      0x381 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/Components/stmpe811/stmpe811.o
                                 0x89a (size before relaxing)
- .debug_str     0x00013b25      0x78a TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
+ .debug_str     0x00013b13      0x78a TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery.o
                                0x18cd (size before relaxing)
- .debug_str     0x000142af      0x49a TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
+ .debug_str     0x0001429d      0x49a TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_sdram.o
                                0x14c7 (size before relaxing)
- .debug_str     0x00014749       0xbc TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
+ .debug_str     0x00014737       0xbc TouchGFX/build/ST/STM32F429IDISCO/../Drivers/BSP/STM32F429I-Discovery/stm32f429i_discovery_ts.o
                                 0x9f7 (size before relaxing)
- .debug_str     0x00014805       0x58 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
+ .debug_str     0x000147f3       0x58 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/system_stm32f4xx.o
                                 0x7e7 (size before relaxing)
- .debug_str     0x0001485d      0x271 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_str     0x0001484b      0x271 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
                                 0xfbd (size before relaxing)
- .debug_str     0x00014ace      0x224 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_str     0x00014abc      0x224 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
                                 0xdc1 (size before relaxing)
- .debug_str     0x00014cf2      0x2df TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
+ .debug_str     0x00014ce0      0x2df TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o
                                 0xe24 (size before relaxing)
- .debug_str     0x00014fd1      0x2f8 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_str     0x00014fbf      0x2f8 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
                                0x10fc (size before relaxing)
- .debug_str     0x000152c9      0x2bb TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_str     0x000152b7      0x2bb TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
                                 0xbf4 (size before relaxing)
- .debug_str     0x00015584      0x2e0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
+ .debug_str     0x00015572      0x2e0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.o
                                 0xd63 (size before relaxing)
- .debug_str     0x00015864      0x106 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_str     0x00015852      0x106 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
                                 0x981 (size before relaxing)
- .debug_str     0x0001596a      0x742 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_str     0x00015958      0x742 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
                                0x13b9 (size before relaxing)
- .debug_str     0x000160ac      0x435 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
+ .debug_str     0x0001609a      0x435 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.o
                                 0xe45 (size before relaxing)
- .debug_str     0x000164e1      0x7a0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
+ .debug_str     0x000164cf      0x7a0 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o
                                0x11b7 (size before relaxing)
- .debug_str     0x00016c81       0x72 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
+ .debug_str     0x00016c6f       0x72 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o
                                 0xa73 (size before relaxing)
- .debug_str     0x00016cf3      0x125 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_str     0x00016ce1      0x125 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
                                 0xb3b (size before relaxing)
- .debug_str     0x00016e18       0xb5 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_str     0x00016e06       0xb5 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
                                 0x982 (size before relaxing)
- .debug_str     0x00016ecd      0x2b6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
+ .debug_str     0x00016ebb      0x2b6 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.o
                                 0xed4 (size before relaxing)
- .debug_str     0x00017183      0x4d2 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_str     0x00017171      0x4d2 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
                                0x1068 (size before relaxing)
- .debug_str     0x00017655      0xc89 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_str     0x00017643      0xc89 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
                                0x194b (size before relaxing)
- .debug_str     0x000182de      0x4c7 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_str     0x000182cc      0x4c7 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
                                0x112a (size before relaxing)
- .debug_str     0x000187a5      0x4be TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
+ .debug_str     0x00018793      0x4be TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.o
                                 0xe4d (size before relaxing)
- .debug_str     0x00018c63      0x425 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
+ .debug_str     0x00018c51      0x425 TouchGFX/build/ST/STM32F429IDISCO/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o
                                0x10ca (size before relaxing)
- .debug_str     0x00019088      0x313 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
+ .debug_str     0x00019076      0x313 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.o
                                0x14aa (size before relaxing)
- .debug_str     0x0001939b      0x29a TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
+ .debug_str     0x00019389      0x29a TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.o
                                0x10ff (size before relaxing)
- .debug_str     0x00019635      0x10f TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
+ .debug_str     0x00019623      0x10f TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.o
                                0x1019 (size before relaxing)
- .debug_str     0x00019744       0x51 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
+ .debug_str     0x00019732       0x51 TouchGFX/build/ST/STM32F429IDISCO/../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.o
                                 0xf46 (size before relaxing)
- .debug_str     0x00019795       0x23 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
+ .debug_str     0x00019783       0x23 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usb_device.o
                                 0xf0b (size before relaxing)
- .debug_str     0x000197b8       0x6d TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
+ .debug_str     0x000197a6       0x6d TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_cdc_if.o
                                 0xfef (size before relaxing)
- .debug_str     0x00019825       0x5c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
+ .debug_str     0x00019813       0x5c TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_conf.o
                                0x1df0 (size before relaxing)
- .debug_str     0x00019881      0x167 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
+ .debug_str     0x0001986f      0x167 TouchGFX/build/ST/STM32F429IDISCO/Core/Src/usbd_desc.o
                                 0xd1b (size before relaxing)
 
 .comment        0x00000000       0x7f

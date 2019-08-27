@@ -136,6 +136,9 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
   }
 }
 
+/**
+ * ADC Conversion callback
+ */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
     temperature = (((adcBuffer[0]*VSENSE)-.76)/.0025)+25;

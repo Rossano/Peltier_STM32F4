@@ -21,6 +21,12 @@ extern TIM_HandleTypeDef TimHandle;
   * @brief TIM8 Initialization Function
   * @param None
   * @retval None
+  *
+  * ADC Sampling Timer:
+  * TIMER4 72 MHz base
+  * Prescaler 48000, count 500:
+  * 72000000 / 48000 = 1500 Hz
+  * 1500 / 3000 = 0.5Hz = 2 sec
   */
 void MX_TIM4_Init(void)		// 8
 {
@@ -39,7 +45,7 @@ void MX_TIM4_Init(void)		// 8
   htim4.Instance = TIM4;			// 8
   htim4.Init.Prescaler = 48000-1;	// 8
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;	// 8
-  htim4.Init.Period = 1750-1;		// 8
+  htim4.Init.Period = 300; //1750-1;		// 8
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;	// 8
   //htim8.Init.RepetitionCounter = 0;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;	// 8
@@ -233,6 +239,11 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
 
 }
 
+/**
+ * TIMER4 Interrupt Hander
+ *
+ * Just unlock xSamplingTimerSemaphore for the default task
+ */
 void TIM4_IRQHandle()	// 8
 {
 	BaseType_t xHigherPriorityTaskWoken;

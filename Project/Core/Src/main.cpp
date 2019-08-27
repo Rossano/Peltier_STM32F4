@@ -607,7 +607,7 @@ int main(void)
     HAL_ADC_MspInit(&hadc1);
 
     HAL_ADC_Start(&hadc1);
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
+//    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)adcBuffer, ADC_CHANNELS);
 
     touchgfx_init();
 #ifdef PRINTF_DBG
