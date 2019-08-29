@@ -32,7 +32,7 @@ void MX_TIM4_Init(void)		// 8
 {
 
   /* USER CODE BEGIN TIM8_Init 0 */
-
+	HAL_TIM_Base_MspInit(&htim4);
   /* USER CODE END TIM8_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
@@ -43,9 +43,9 @@ void MX_TIM4_Init(void)		// 8
 
   /* USER CODE END TIM8_Init 1 */
   htim4.Instance = TIM4;			// 8
-  htim4.Init.Prescaler = 48000-1;	// 8
+  htim4.Init.Prescaler = 48000-1;	// 8	-> 1
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;	// 8
-  htim4.Init.Period = 300; //1750-1;		// 8
+  htim4.Init.Period = 3000; //1750-1;		// 8
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;	// 8
   //htim8.Init.RepetitionCounter = 0;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;	// 8
@@ -58,13 +58,13 @@ void MX_TIM4_Init(void)		// 8
   {
     Error_Handler();
   }
-  if (HAL_TIM_OC_Init(&htim4) != HAL_OK)
+  /*if (HAL_TIM_OC_Init(&htim4) != HAL_OK)
   {
 	  Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  }*/
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET; //TIM_TRGO_UPDATE;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)	// 8
+ /* if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)	// 8
   {
     Error_Handler();
   }
@@ -75,7 +75,7 @@ void MX_TIM4_Init(void)		// 8
   if(HAL_TIM_OC_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
   {
 	  Error_Handler();
-  }
+  }*/
   /* USER CODE BEGIN TIM8_Init 2 */
 
   /* USER CODE END TIM8_Init 2 */
@@ -165,6 +165,18 @@ void MX_TIM9_Init(void)
 //
 //}
 
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef * htim)
+{
+	if (htim->Instance == TIM4)
+	{
+		// TIMER 4 clock enable
+		__HAL_RCC_TIM4_CLK_ENABLE();
+		// TIMER 4 Global interrupt enable
+		HAL_NVIC_SetPriority(TIM4_IRQn, 0, 0);
+		HAL_NVIC_EnableIRQ(TIM4_IRQn);
+	}
+}
+
 /**
 * @brief TIM_Base MSP De-Initialization
 * This function freeze the hardware resources used in this example
@@ -239,12 +251,13 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
 
 }
 
+
 /**
  * TIMER4 Interrupt Hander
  *
  * Just unlock xSamplingTimerSemaphore for the default task
  */
-void TIM4_IRQHandle()	// 8
+void TIM4_IRQHandler()	// 8
 {
 	/*BaseType_t xHigherPriorityTaskWoken;
 	xHigherPriorityTaskWoken = pdFALSE;
@@ -253,3 +266,12 @@ void TIM4_IRQHandle()	// 8
 	HAL_TIM_IRQHandler(&htim4);
 }
 
+void HAL_TIM4_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim->Instance == TIM4)
+	{
+		BaseType_t xHigherPriorityTaskWoken;
+		xHigherPriorityTaskWoken = pdFALSE;
+		xSemaphoreGiveFromISR(xSamplingTimerSemaphore, &xHigherPriorityTaskWoken);
+	}
+}

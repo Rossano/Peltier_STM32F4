@@ -21,8 +21,10 @@ extern TIM_HandleTypeDef htim9;
 
 void MX_TIM4_Init(void);			// 8
 void MX_TIM9_Init(void);
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef * htim);
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim);
 void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base);
-void TIM4_IRQHandle();				// 8
+void TIM4_IRQHandler();				// 8
+void HAL_TIM4_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 
 #endif /* PROJECT_CORE_SRC_TIMER_H_ */
